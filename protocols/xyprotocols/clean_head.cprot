@@ -1,0 +1,2372 @@
+{
+  "description": "",
+  "export_csv": false,
+  "export_json": false,
+  "session_name": "",
+  "skip_config": false,
+  "h5_during_run": true,
+  "use_end_protocol": false,
+  "end_protocol": "",
+  "live_variable_update": false,
+  "allow_live_comments": false,
+  "flyer_data": [],
+  "instrument_aliases": {
+    "Instrument": [],
+    "Alias": []
+  },
+  "channel_aliases": {
+    "channel": [],
+    "Alias": []
+  },
+  "loop_steps": [
+    {
+      "step_type": "For Loop",
+      "has_children": true,
+      "children": [
+        {
+          "step_type": "Run Subprotocol",
+          "has_children": false,
+          "children": [],
+          "name": "move",
+          "full_name": "Run Subprotocol (move)",
+          "parent_step": "For Loop (For_Loop)",
+          "time_weight": 3,
+          "used_devices": [
+            "xy"
+          ],
+          "description": "",
+          "is_active": true,
+          "prot_path": "C:/Users/GuggenbergerB/AppData/Local/Programs/NOMAD-CAMELS/protocols/xyprotocols/move.cprot",
+          "vars_in": {
+            "Variable": [
+              "position"
+            ],
+            "Value": [
+              "'CLEANING_POSITION'"
+            ]
+          },
+          "vars_out": {
+            "Variable": [],
+            "Write to name": []
+          },
+          "data_output": "sub-stream",
+          "own_plots": true,
+          "_sub_protocol_dict": {
+            "description": "",
+            "export_csv": false,
+            "export_json": false,
+            "session_name": "",
+            "skip_config": false,
+            "h5_during_run": true,
+            "use_end_protocol": false,
+            "end_protocol": "",
+            "live_variable_update": false,
+            "allow_live_comments": false,
+            "flyer_data": [],
+            "instrument_aliases": {
+              "Instrument": [],
+              "Alias": []
+            },
+            "channel_aliases": {
+              "channel": [],
+              "Alias": []
+            },
+            "loop_steps": [
+              {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "height",
+                "full_name": "Set Channels (height)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_height_param"
+                  ],
+                  "Values": [
+                    "'MOVE_HEIGHT'"
+                  ]
+                },
+                "wait_for_set": true
+              },
+              {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "position",
+                "full_name": "Set Channels (position)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_position_param"
+                  ],
+                  "Values": [
+                    "position"
+                  ]
+                },
+                "wait_for_set": true
+              }
+            ],
+            "loop_step_dict": {
+              "Set Channels (height)": {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "height",
+                "full_name": "Set Channels (height)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_height_param"
+                  ],
+                  "Values": [
+                    "'MOVE_HEIGHT'"
+                  ]
+                },
+                "wait_for_set": true
+              },
+              "Set Channels (position)": {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "position",
+                "full_name": "Set Channels (position)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_position_param"
+                  ],
+                  "Values": [
+                    "position"
+                  ]
+                },
+                "wait_for_set": true
+              }
+            },
+            "plots": [],
+            "filename": "safe_move_data",
+            "variables": {
+              "position": "(40.0, 70.0)"
+            },
+            "loop_step_variables": {},
+            "channels": {},
+            "name": "move",
+            "use_nexus": false,
+            "measurement_description": "",
+            "tags": []
+          }
+        },
+        {
+          "step_type": "Set Channels",
+          "has_children": false,
+          "children": [],
+          "name": "heightclean",
+          "full_name": "Set Channels (heightclean)",
+          "parent_step": "For Loop (For_Loop)",
+          "time_weight": 1,
+          "used_devices": [
+            "xy"
+          ],
+          "description": "",
+          "is_active": true,
+          "channels_values": {
+            "Channels": [
+              "xy_height_param"
+            ],
+            "Values": [
+              "'CLEANING_HEIGHT'"
+            ]
+          },
+          "wait_for_set": true
+        },
+        {
+          "step_type": "Set Channels",
+          "has_children": false,
+          "children": [],
+          "name": "fillhead",
+          "full_name": "Set Channels (fillhead)",
+          "parent_step": "For Loop (For_Loop)",
+          "time_weight": 1,
+          "used_devices": [
+            "xy"
+          ],
+          "description": "",
+          "is_active": true,
+          "channels_values": {
+            "Channels": [
+              "xy_fill_head_param"
+            ],
+            "Values": [
+              "'CLEANING_VOLUME'"
+            ]
+          },
+          "wait_for_set": true
+        },
+        {
+          "step_type": "Run Subprotocol",
+          "has_children": false,
+          "children": [],
+          "name": "discardsolution",
+          "full_name": "Run Subprotocol (discardsolution)",
+          "parent_step": "For Loop (For_Loop)",
+          "time_weight": 8,
+          "used_devices": [
+            "xy"
+          ],
+          "description": "",
+          "is_active": true,
+          "prot_path": "C:/Users/GuggenbergerB/AppData/Local/Programs/NOMAD-CAMELS/protocols/xyprotocols/discard_solution.cprot",
+          "vars_in": {
+            "Variable": [],
+            "Value": []
+          },
+          "vars_out": {
+            "Variable": [],
+            "Write to name": []
+          },
+          "data_output": "sub-stream",
+          "own_plots": true,
+          "_sub_protocol_dict": {
+            "description": "",
+            "export_csv": false,
+            "export_json": false,
+            "session_name": "",
+            "skip_config": false,
+            "h5_during_run": true,
+            "use_end_protocol": false,
+            "end_protocol": "",
+            "live_variable_update": false,
+            "allow_live_comments": false,
+            "flyer_data": [],
+            "instrument_aliases": {
+              "Instrument": [],
+              "Alias": []
+            },
+            "channel_aliases": {
+              "channel": [],
+              "Alias": []
+            },
+            "loop_steps": [
+              {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "change_volume",
+                "full_name": "Set Channels (change_volume)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_change_volume_param"
+                  ],
+                  "Values": [
+                    "'NEGATIVE_VOLUME'"
+                  ]
+                },
+                "wait_for_set": true
+              },
+              {
+                "step_type": "Run Subprotocol",
+                "has_children": false,
+                "children": [],
+                "name": "movewaste",
+                "full_name": "Run Subprotocol (movewaste)",
+                "parent_step": "None",
+                "time_weight": 3,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "prot_path": "C:/Users/GuggenbergerB/AppData/Local/nomad_camels/python_files/move.cprot",
+                "vars_in": {
+                  "Variable": [
+                    "position"
+                  ],
+                  "Value": [
+                    "'WASTE_POSITION'"
+                  ]
+                },
+                "vars_out": {
+                  "Variable": [],
+                  "Write to name": []
+                },
+                "data_output": "sub-stream",
+                "own_plots": true,
+                "_sub_protocol_dict": {
+                  "description": "",
+                  "export_csv": false,
+                  "export_json": false,
+                  "session_name": "",
+                  "skip_config": false,
+                  "h5_during_run": true,
+                  "use_end_protocol": false,
+                  "end_protocol": "",
+                  "live_variable_update": false,
+                  "allow_live_comments": false,
+                  "flyer_data": [],
+                  "instrument_aliases": {
+                    "Instrument": [],
+                    "Alias": []
+                  },
+                  "channel_aliases": {
+                    "channel": [],
+                    "Alias": []
+                  },
+                  "loop_steps": [
+                    {
+                      "step_type": "Set Channels",
+                      "has_children": false,
+                      "children": [],
+                      "name": "height",
+                      "full_name": "Set Channels (height)",
+                      "parent_step": "None",
+                      "time_weight": 1,
+                      "used_devices": [
+                        "xy"
+                      ],
+                      "description": "",
+                      "is_active": true,
+                      "channels_values": {
+                        "Channels": [
+                          "xy_height_param"
+                        ],
+                        "Values": [
+                          "'MOVE_HEIGHT'"
+                        ]
+                      },
+                      "wait_for_set": true
+                    },
+                    {
+                      "step_type": "Set Channels",
+                      "has_children": false,
+                      "children": [],
+                      "name": "position",
+                      "full_name": "Set Channels (position)",
+                      "parent_step": "None",
+                      "time_weight": 1,
+                      "used_devices": [
+                        "xy"
+                      ],
+                      "description": "",
+                      "is_active": true,
+                      "channels_values": {
+                        "Channels": [
+                          "xy_position_param"
+                        ],
+                        "Values": [
+                          "position"
+                        ]
+                      },
+                      "wait_for_set": true
+                    }
+                  ],
+                  "loop_step_dict": {
+                    "Set Channels (height)": {
+                      "step_type": "Set Channels",
+                      "has_children": false,
+                      "children": [],
+                      "name": "height",
+                      "full_name": "Set Channels (height)",
+                      "parent_step": "None",
+                      "time_weight": 1,
+                      "used_devices": [
+                        "xy"
+                      ],
+                      "description": "",
+                      "is_active": true,
+                      "channels_values": {
+                        "Channels": [
+                          "xy_height_param"
+                        ],
+                        "Values": [
+                          "'MOVE_HEIGHT'"
+                        ]
+                      },
+                      "wait_for_set": true
+                    },
+                    "Set Channels (position)": {
+                      "step_type": "Set Channels",
+                      "has_children": false,
+                      "children": [],
+                      "name": "position",
+                      "full_name": "Set Channels (position)",
+                      "parent_step": "None",
+                      "time_weight": 1,
+                      "used_devices": [
+                        "xy"
+                      ],
+                      "description": "",
+                      "is_active": true,
+                      "channels_values": {
+                        "Channels": [
+                          "xy_position_param"
+                        ],
+                        "Values": [
+                          "position"
+                        ]
+                      },
+                      "wait_for_set": true
+                    }
+                  },
+                  "plots": [],
+                  "filename": "safe_move_data",
+                  "variables": {
+                    "position": "CLEANING_POSITION"
+                  },
+                  "loop_step_variables": {},
+                  "channels": {},
+                  "name": "move",
+                  "use_nexus": false,
+                  "measurement_description": "",
+                  "tags": []
+                }
+              },
+              {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "heightwaste",
+                "full_name": "Set Channels (heightwaste)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_height_param"
+                  ],
+                  "Values": [
+                    "'WASTE_HEIGHT'"
+                  ]
+                },
+                "wait_for_set": true
+              },
+              {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "purge_head",
+                "full_name": "Set Channels (purge_head)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_purge_head_param"
+                  ],
+                  "Values": [
+                    "'PURGE_VOLUME'"
+                  ]
+                },
+                "wait_for_set": true
+              },
+              {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "height_final",
+                "full_name": "Set Channels (height_final)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_height_param"
+                  ],
+                  "Values": [
+                    "'MOVE_HEIGHT'"
+                  ]
+                },
+                "wait_for_set": true
+              }
+            ],
+            "loop_step_dict": {
+              "Set Channels (change_volume)": {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "change_volume",
+                "full_name": "Set Channels (change_volume)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_change_volume_param"
+                  ],
+                  "Values": [
+                    "'NEGATIVE_VOLUME'"
+                  ]
+                },
+                "wait_for_set": true
+              },
+              "Run Subprotocol (movewaste)": {
+                "step_type": "Run Subprotocol",
+                "has_children": false,
+                "children": [],
+                "name": "movewaste",
+                "full_name": "Run Subprotocol (movewaste)",
+                "parent_step": "None",
+                "time_weight": 3,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "prot_path": "C:/Users/GuggenbergerB/AppData/Local/nomad_camels/python_files/move.cprot",
+                "vars_in": {
+                  "Variable": [
+                    "position"
+                  ],
+                  "Value": [
+                    "'WASTE_POSITION'"
+                  ]
+                },
+                "vars_out": {
+                  "Variable": [],
+                  "Write to name": []
+                },
+                "data_output": "sub-stream",
+                "own_plots": true,
+                "_sub_protocol_dict": {
+                  "description": "",
+                  "export_csv": false,
+                  "export_json": false,
+                  "session_name": "",
+                  "skip_config": false,
+                  "h5_during_run": true,
+                  "use_end_protocol": false,
+                  "end_protocol": "",
+                  "live_variable_update": false,
+                  "allow_live_comments": false,
+                  "flyer_data": [],
+                  "instrument_aliases": {
+                    "Instrument": [],
+                    "Alias": []
+                  },
+                  "channel_aliases": {
+                    "channel": [],
+                    "Alias": []
+                  },
+                  "loop_steps": [
+                    {
+                      "step_type": "Set Channels",
+                      "has_children": false,
+                      "children": [],
+                      "name": "height",
+                      "full_name": "Set Channels (height)",
+                      "parent_step": "None",
+                      "time_weight": 1,
+                      "used_devices": [
+                        "xy"
+                      ],
+                      "description": "",
+                      "is_active": true,
+                      "channels_values": {
+                        "Channels": [
+                          "xy_height_param"
+                        ],
+                        "Values": [
+                          "'MOVE_HEIGHT'"
+                        ]
+                      },
+                      "wait_for_set": true
+                    },
+                    {
+                      "step_type": "Set Channels",
+                      "has_children": false,
+                      "children": [],
+                      "name": "position",
+                      "full_name": "Set Channels (position)",
+                      "parent_step": "None",
+                      "time_weight": 1,
+                      "used_devices": [
+                        "xy"
+                      ],
+                      "description": "",
+                      "is_active": true,
+                      "channels_values": {
+                        "Channels": [
+                          "xy_position_param"
+                        ],
+                        "Values": [
+                          "position"
+                        ]
+                      },
+                      "wait_for_set": true
+                    }
+                  ],
+                  "loop_step_dict": {
+                    "Set Channels (height)": {
+                      "step_type": "Set Channels",
+                      "has_children": false,
+                      "children": [],
+                      "name": "height",
+                      "full_name": "Set Channels (height)",
+                      "parent_step": "None",
+                      "time_weight": 1,
+                      "used_devices": [
+                        "xy"
+                      ],
+                      "description": "",
+                      "is_active": true,
+                      "channels_values": {
+                        "Channels": [
+                          "xy_height_param"
+                        ],
+                        "Values": [
+                          "'MOVE_HEIGHT'"
+                        ]
+                      },
+                      "wait_for_set": true
+                    },
+                    "Set Channels (position)": {
+                      "step_type": "Set Channels",
+                      "has_children": false,
+                      "children": [],
+                      "name": "position",
+                      "full_name": "Set Channels (position)",
+                      "parent_step": "None",
+                      "time_weight": 1,
+                      "used_devices": [
+                        "xy"
+                      ],
+                      "description": "",
+                      "is_active": true,
+                      "channels_values": {
+                        "Channels": [
+                          "xy_position_param"
+                        ],
+                        "Values": [
+                          "position"
+                        ]
+                      },
+                      "wait_for_set": true
+                    }
+                  },
+                  "plots": [],
+                  "filename": "safe_move_data",
+                  "variables": {
+                    "position": "CLEANING_POSITION"
+                  },
+                  "loop_step_variables": {},
+                  "channels": {},
+                  "name": "move",
+                  "use_nexus": false,
+                  "measurement_description": "",
+                  "tags": []
+                }
+              },
+              "Set Channels (heightwaste)": {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "heightwaste",
+                "full_name": "Set Channels (heightwaste)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_height_param"
+                  ],
+                  "Values": [
+                    "'WASTE_HEIGHT'"
+                  ]
+                },
+                "wait_for_set": true
+              },
+              "Set Channels (purge_head)": {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "purge_head",
+                "full_name": "Set Channels (purge_head)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_purge_head_param"
+                  ],
+                  "Values": [
+                    "'PURGE_VOLUME'"
+                  ]
+                },
+                "wait_for_set": true
+              },
+              "Set Channels (height_final)": {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "height_final",
+                "full_name": "Set Channels (height_final)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_height_param"
+                  ],
+                  "Values": [
+                    "'MOVE_HEIGHT'"
+                  ]
+                },
+                "wait_for_set": true
+              }
+            },
+            "plots": [],
+            "filename": "",
+            "variables": {},
+            "loop_step_variables": {},
+            "channels": {},
+            "name": "discard_solution",
+            "use_nexus": false,
+            "measurement_description": "",
+            "tags": []
+          }
+        }
+      ],
+      "name": "For_Loop",
+      "full_name": "For Loop (For_Loop)",
+      "parent_step": "None",
+      "time_weight": 27,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "loop_type": "start - stop",
+      "start_val": "1",
+      "stop_val": "iterations",
+      "min_val": "",
+      "max_val": "",
+      "n_points": "0",
+      "sweep_mode": "linear",
+      "n_iterations": 2,
+      "val_list": [],
+      "file_path": "",
+      "include_end_points": true,
+      "use_distance": true,
+      "point_distance": "1"
+    }
+  ],
+  "loop_step_dict": {
+    "For Loop (For_Loop)": {
+      "step_type": "For Loop",
+      "has_children": true,
+      "children": [
+        {
+          "step_type": "Run Subprotocol",
+          "has_children": false,
+          "children": [],
+          "name": "move",
+          "full_name": "Run Subprotocol (move)",
+          "parent_step": "For Loop (For_Loop)",
+          "time_weight": 3,
+          "used_devices": [
+            "xy"
+          ],
+          "description": "",
+          "is_active": true,
+          "prot_path": "C:/Users/GuggenbergerB/AppData/Local/Programs/NOMAD-CAMELS/protocols/xyprotocols/move.cprot",
+          "vars_in": {
+            "Variable": [
+              "position"
+            ],
+            "Value": [
+              "'CLEANING_POSITION'"
+            ]
+          },
+          "vars_out": {
+            "Variable": [],
+            "Write to name": []
+          },
+          "data_output": "sub-stream",
+          "own_plots": true,
+          "_sub_protocol_dict": {
+            "description": "",
+            "export_csv": false,
+            "export_json": false,
+            "session_name": "",
+            "skip_config": false,
+            "h5_during_run": true,
+            "use_end_protocol": false,
+            "end_protocol": "",
+            "live_variable_update": false,
+            "allow_live_comments": false,
+            "flyer_data": [],
+            "instrument_aliases": {
+              "Instrument": [],
+              "Alias": []
+            },
+            "channel_aliases": {
+              "channel": [],
+              "Alias": []
+            },
+            "loop_steps": [
+              {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "height",
+                "full_name": "Set Channels (height)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_height_param"
+                  ],
+                  "Values": [
+                    "'MOVE_HEIGHT'"
+                  ]
+                },
+                "wait_for_set": true
+              },
+              {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "position",
+                "full_name": "Set Channels (position)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_position_param"
+                  ],
+                  "Values": [
+                    "position"
+                  ]
+                },
+                "wait_for_set": true
+              }
+            ],
+            "loop_step_dict": {
+              "Set Channels (height)": {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "height",
+                "full_name": "Set Channels (height)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_height_param"
+                  ],
+                  "Values": [
+                    "'MOVE_HEIGHT'"
+                  ]
+                },
+                "wait_for_set": true
+              },
+              "Set Channels (position)": {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "position",
+                "full_name": "Set Channels (position)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_position_param"
+                  ],
+                  "Values": [
+                    "position"
+                  ]
+                },
+                "wait_for_set": true
+              }
+            },
+            "plots": [],
+            "filename": "safe_move_data",
+            "variables": {
+              "position": "(40.0, 70.0)"
+            },
+            "loop_step_variables": {},
+            "channels": {},
+            "name": "move",
+            "use_nexus": false,
+            "measurement_description": "",
+            "tags": []
+          }
+        },
+        {
+          "step_type": "Set Channels",
+          "has_children": false,
+          "children": [],
+          "name": "heightclean",
+          "full_name": "Set Channels (heightclean)",
+          "parent_step": "For Loop (For_Loop)",
+          "time_weight": 1,
+          "used_devices": [
+            "xy"
+          ],
+          "description": "",
+          "is_active": true,
+          "channels_values": {
+            "Channels": [
+              "xy_height_param"
+            ],
+            "Values": [
+              "'CLEANING_HEIGHT'"
+            ]
+          },
+          "wait_for_set": true
+        },
+        {
+          "step_type": "Set Channels",
+          "has_children": false,
+          "children": [],
+          "name": "fillhead",
+          "full_name": "Set Channels (fillhead)",
+          "parent_step": "For Loop (For_Loop)",
+          "time_weight": 1,
+          "used_devices": [
+            "xy"
+          ],
+          "description": "",
+          "is_active": true,
+          "channels_values": {
+            "Channels": [
+              "xy_fill_head_param"
+            ],
+            "Values": [
+              "'CLEANING_VOLUME'"
+            ]
+          },
+          "wait_for_set": true
+        },
+        {
+          "step_type": "Run Subprotocol",
+          "has_children": false,
+          "children": [],
+          "name": "discardsolution",
+          "full_name": "Run Subprotocol (discardsolution)",
+          "parent_step": "For Loop (For_Loop)",
+          "time_weight": 8,
+          "used_devices": [
+            "xy"
+          ],
+          "description": "",
+          "is_active": true,
+          "prot_path": "C:/Users/GuggenbergerB/AppData/Local/Programs/NOMAD-CAMELS/protocols/xyprotocols/discard_solution.cprot",
+          "vars_in": {
+            "Variable": [],
+            "Value": []
+          },
+          "vars_out": {
+            "Variable": [],
+            "Write to name": []
+          },
+          "data_output": "sub-stream",
+          "own_plots": true,
+          "_sub_protocol_dict": {
+            "description": "",
+            "export_csv": false,
+            "export_json": false,
+            "session_name": "",
+            "skip_config": false,
+            "h5_during_run": true,
+            "use_end_protocol": false,
+            "end_protocol": "",
+            "live_variable_update": false,
+            "allow_live_comments": false,
+            "flyer_data": [],
+            "instrument_aliases": {
+              "Instrument": [],
+              "Alias": []
+            },
+            "channel_aliases": {
+              "channel": [],
+              "Alias": []
+            },
+            "loop_steps": [
+              {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "change_volume",
+                "full_name": "Set Channels (change_volume)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_change_volume_param"
+                  ],
+                  "Values": [
+                    "'NEGATIVE_VOLUME'"
+                  ]
+                },
+                "wait_for_set": true
+              },
+              {
+                "step_type": "Run Subprotocol",
+                "has_children": false,
+                "children": [],
+                "name": "movewaste",
+                "full_name": "Run Subprotocol (movewaste)",
+                "parent_step": "None",
+                "time_weight": 3,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "prot_path": "C:/Users/GuggenbergerB/AppData/Local/nomad_camels/python_files/move.cprot",
+                "vars_in": {
+                  "Variable": [
+                    "position"
+                  ],
+                  "Value": [
+                    "'WASTE_POSITION'"
+                  ]
+                },
+                "vars_out": {
+                  "Variable": [],
+                  "Write to name": []
+                },
+                "data_output": "sub-stream",
+                "own_plots": true,
+                "_sub_protocol_dict": {
+                  "description": "",
+                  "export_csv": false,
+                  "export_json": false,
+                  "session_name": "",
+                  "skip_config": false,
+                  "h5_during_run": true,
+                  "use_end_protocol": false,
+                  "end_protocol": "",
+                  "live_variable_update": false,
+                  "allow_live_comments": false,
+                  "flyer_data": [],
+                  "instrument_aliases": {
+                    "Instrument": [],
+                    "Alias": []
+                  },
+                  "channel_aliases": {
+                    "channel": [],
+                    "Alias": []
+                  },
+                  "loop_steps": [
+                    {
+                      "step_type": "Set Channels",
+                      "has_children": false,
+                      "children": [],
+                      "name": "height",
+                      "full_name": "Set Channels (height)",
+                      "parent_step": "None",
+                      "time_weight": 1,
+                      "used_devices": [
+                        "xy"
+                      ],
+                      "description": "",
+                      "is_active": true,
+                      "channels_values": {
+                        "Channels": [
+                          "xy_height_param"
+                        ],
+                        "Values": [
+                          "'MOVE_HEIGHT'"
+                        ]
+                      },
+                      "wait_for_set": true
+                    },
+                    {
+                      "step_type": "Set Channels",
+                      "has_children": false,
+                      "children": [],
+                      "name": "position",
+                      "full_name": "Set Channels (position)",
+                      "parent_step": "None",
+                      "time_weight": 1,
+                      "used_devices": [
+                        "xy"
+                      ],
+                      "description": "",
+                      "is_active": true,
+                      "channels_values": {
+                        "Channels": [
+                          "xy_position_param"
+                        ],
+                        "Values": [
+                          "position"
+                        ]
+                      },
+                      "wait_for_set": true
+                    }
+                  ],
+                  "loop_step_dict": {
+                    "Set Channels (height)": {
+                      "step_type": "Set Channels",
+                      "has_children": false,
+                      "children": [],
+                      "name": "height",
+                      "full_name": "Set Channels (height)",
+                      "parent_step": "None",
+                      "time_weight": 1,
+                      "used_devices": [
+                        "xy"
+                      ],
+                      "description": "",
+                      "is_active": true,
+                      "channels_values": {
+                        "Channels": [
+                          "xy_height_param"
+                        ],
+                        "Values": [
+                          "'MOVE_HEIGHT'"
+                        ]
+                      },
+                      "wait_for_set": true
+                    },
+                    "Set Channels (position)": {
+                      "step_type": "Set Channels",
+                      "has_children": false,
+                      "children": [],
+                      "name": "position",
+                      "full_name": "Set Channels (position)",
+                      "parent_step": "None",
+                      "time_weight": 1,
+                      "used_devices": [
+                        "xy"
+                      ],
+                      "description": "",
+                      "is_active": true,
+                      "channels_values": {
+                        "Channels": [
+                          "xy_position_param"
+                        ],
+                        "Values": [
+                          "position"
+                        ]
+                      },
+                      "wait_for_set": true
+                    }
+                  },
+                  "plots": [],
+                  "filename": "safe_move_data",
+                  "variables": {
+                    "position": "CLEANING_POSITION"
+                  },
+                  "loop_step_variables": {},
+                  "channels": {},
+                  "name": "move",
+                  "use_nexus": false,
+                  "measurement_description": "",
+                  "tags": []
+                }
+              },
+              {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "heightwaste",
+                "full_name": "Set Channels (heightwaste)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_height_param"
+                  ],
+                  "Values": [
+                    "'WASTE_HEIGHT'"
+                  ]
+                },
+                "wait_for_set": true
+              },
+              {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "purge_head",
+                "full_name": "Set Channels (purge_head)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_purge_head_param"
+                  ],
+                  "Values": [
+                    "'PURGE_VOLUME'"
+                  ]
+                },
+                "wait_for_set": true
+              },
+              {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "height_final",
+                "full_name": "Set Channels (height_final)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_height_param"
+                  ],
+                  "Values": [
+                    "'MOVE_HEIGHT'"
+                  ]
+                },
+                "wait_for_set": true
+              }
+            ],
+            "loop_step_dict": {
+              "Set Channels (change_volume)": {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "change_volume",
+                "full_name": "Set Channels (change_volume)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_change_volume_param"
+                  ],
+                  "Values": [
+                    "'NEGATIVE_VOLUME'"
+                  ]
+                },
+                "wait_for_set": true
+              },
+              "Run Subprotocol (movewaste)": {
+                "step_type": "Run Subprotocol",
+                "has_children": false,
+                "children": [],
+                "name": "movewaste",
+                "full_name": "Run Subprotocol (movewaste)",
+                "parent_step": "None",
+                "time_weight": 3,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "prot_path": "C:/Users/GuggenbergerB/AppData/Local/nomad_camels/python_files/move.cprot",
+                "vars_in": {
+                  "Variable": [
+                    "position"
+                  ],
+                  "Value": [
+                    "'WASTE_POSITION'"
+                  ]
+                },
+                "vars_out": {
+                  "Variable": [],
+                  "Write to name": []
+                },
+                "data_output": "sub-stream",
+                "own_plots": true,
+                "_sub_protocol_dict": {
+                  "description": "",
+                  "export_csv": false,
+                  "export_json": false,
+                  "session_name": "",
+                  "skip_config": false,
+                  "h5_during_run": true,
+                  "use_end_protocol": false,
+                  "end_protocol": "",
+                  "live_variable_update": false,
+                  "allow_live_comments": false,
+                  "flyer_data": [],
+                  "instrument_aliases": {
+                    "Instrument": [],
+                    "Alias": []
+                  },
+                  "channel_aliases": {
+                    "channel": [],
+                    "Alias": []
+                  },
+                  "loop_steps": [
+                    {
+                      "step_type": "Set Channels",
+                      "has_children": false,
+                      "children": [],
+                      "name": "height",
+                      "full_name": "Set Channels (height)",
+                      "parent_step": "None",
+                      "time_weight": 1,
+                      "used_devices": [
+                        "xy"
+                      ],
+                      "description": "",
+                      "is_active": true,
+                      "channels_values": {
+                        "Channels": [
+                          "xy_height_param"
+                        ],
+                        "Values": [
+                          "'MOVE_HEIGHT'"
+                        ]
+                      },
+                      "wait_for_set": true
+                    },
+                    {
+                      "step_type": "Set Channels",
+                      "has_children": false,
+                      "children": [],
+                      "name": "position",
+                      "full_name": "Set Channels (position)",
+                      "parent_step": "None",
+                      "time_weight": 1,
+                      "used_devices": [
+                        "xy"
+                      ],
+                      "description": "",
+                      "is_active": true,
+                      "channels_values": {
+                        "Channels": [
+                          "xy_position_param"
+                        ],
+                        "Values": [
+                          "position"
+                        ]
+                      },
+                      "wait_for_set": true
+                    }
+                  ],
+                  "loop_step_dict": {
+                    "Set Channels (height)": {
+                      "step_type": "Set Channels",
+                      "has_children": false,
+                      "children": [],
+                      "name": "height",
+                      "full_name": "Set Channels (height)",
+                      "parent_step": "None",
+                      "time_weight": 1,
+                      "used_devices": [
+                        "xy"
+                      ],
+                      "description": "",
+                      "is_active": true,
+                      "channels_values": {
+                        "Channels": [
+                          "xy_height_param"
+                        ],
+                        "Values": [
+                          "'MOVE_HEIGHT'"
+                        ]
+                      },
+                      "wait_for_set": true
+                    },
+                    "Set Channels (position)": {
+                      "step_type": "Set Channels",
+                      "has_children": false,
+                      "children": [],
+                      "name": "position",
+                      "full_name": "Set Channels (position)",
+                      "parent_step": "None",
+                      "time_weight": 1,
+                      "used_devices": [
+                        "xy"
+                      ],
+                      "description": "",
+                      "is_active": true,
+                      "channels_values": {
+                        "Channels": [
+                          "xy_position_param"
+                        ],
+                        "Values": [
+                          "position"
+                        ]
+                      },
+                      "wait_for_set": true
+                    }
+                  },
+                  "plots": [],
+                  "filename": "safe_move_data",
+                  "variables": {
+                    "position": "CLEANING_POSITION"
+                  },
+                  "loop_step_variables": {},
+                  "channels": {},
+                  "name": "move",
+                  "use_nexus": false,
+                  "measurement_description": "",
+                  "tags": []
+                }
+              },
+              "Set Channels (heightwaste)": {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "heightwaste",
+                "full_name": "Set Channels (heightwaste)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_height_param"
+                  ],
+                  "Values": [
+                    "'WASTE_HEIGHT'"
+                  ]
+                },
+                "wait_for_set": true
+              },
+              "Set Channels (purge_head)": {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "purge_head",
+                "full_name": "Set Channels (purge_head)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_purge_head_param"
+                  ],
+                  "Values": [
+                    "'PURGE_VOLUME'"
+                  ]
+                },
+                "wait_for_set": true
+              },
+              "Set Channels (height_final)": {
+                "step_type": "Set Channels",
+                "has_children": false,
+                "children": [],
+                "name": "height_final",
+                "full_name": "Set Channels (height_final)",
+                "parent_step": "None",
+                "time_weight": 1,
+                "used_devices": [
+                  "xy"
+                ],
+                "description": "",
+                "is_active": true,
+                "channels_values": {
+                  "Channels": [
+                    "xy_height_param"
+                  ],
+                  "Values": [
+                    "'MOVE_HEIGHT'"
+                  ]
+                },
+                "wait_for_set": true
+              }
+            },
+            "plots": [],
+            "filename": "",
+            "variables": {},
+            "loop_step_variables": {},
+            "channels": {},
+            "name": "discard_solution",
+            "use_nexus": false,
+            "measurement_description": "",
+            "tags": []
+          }
+        }
+      ],
+      "name": "For_Loop",
+      "full_name": "For Loop (For_Loop)",
+      "parent_step": "None",
+      "time_weight": 27,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "loop_type": "start - stop",
+      "start_val": "1",
+      "stop_val": "iterations",
+      "min_val": "",
+      "max_val": "",
+      "n_points": "0",
+      "sweep_mode": "linear",
+      "n_iterations": 2,
+      "val_list": [],
+      "file_path": "",
+      "include_end_points": true,
+      "use_distance": true,
+      "point_distance": "1"
+    },
+    "Run Subprotocol (move)": {
+      "step_type": "Run Subprotocol",
+      "has_children": false,
+      "children": [],
+      "name": "move",
+      "full_name": "Run Subprotocol (move)",
+      "parent_step": "For Loop (For_Loop)",
+      "time_weight": 3,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "prot_path": "C:/Users/GuggenbergerB/AppData/Local/Programs/NOMAD-CAMELS/protocols/xyprotocols/move.cprot",
+      "vars_in": {
+        "Variable": [
+          "position"
+        ],
+        "Value": [
+          "'CLEANING_POSITION'"
+        ]
+      },
+      "vars_out": {
+        "Variable": [],
+        "Write to name": []
+      },
+      "data_output": "sub-stream",
+      "own_plots": true,
+      "_sub_protocol_dict": {
+        "description": "",
+        "export_csv": false,
+        "export_json": false,
+        "session_name": "",
+        "skip_config": false,
+        "h5_during_run": true,
+        "use_end_protocol": false,
+        "end_protocol": "",
+        "live_variable_update": false,
+        "allow_live_comments": false,
+        "flyer_data": [],
+        "instrument_aliases": {
+          "Instrument": [],
+          "Alias": []
+        },
+        "channel_aliases": {
+          "channel": [],
+          "Alias": []
+        },
+        "loop_steps": [
+          {
+            "step_type": "Set Channels",
+            "has_children": false,
+            "children": [],
+            "name": "height",
+            "full_name": "Set Channels (height)",
+            "parent_step": "None",
+            "time_weight": 1,
+            "used_devices": [
+              "xy"
+            ],
+            "description": "",
+            "is_active": true,
+            "channels_values": {
+              "Channels": [
+                "xy_height_param"
+              ],
+              "Values": [
+                "'MOVE_HEIGHT'"
+              ]
+            },
+            "wait_for_set": true
+          },
+          {
+            "step_type": "Set Channels",
+            "has_children": false,
+            "children": [],
+            "name": "position",
+            "full_name": "Set Channels (position)",
+            "parent_step": "None",
+            "time_weight": 1,
+            "used_devices": [
+              "xy"
+            ],
+            "description": "",
+            "is_active": true,
+            "channels_values": {
+              "Channels": [
+                "xy_position_param"
+              ],
+              "Values": [
+                "position"
+              ]
+            },
+            "wait_for_set": true
+          }
+        ],
+        "loop_step_dict": {
+          "Set Channels (height)": {
+            "step_type": "Set Channels",
+            "has_children": false,
+            "children": [],
+            "name": "height",
+            "full_name": "Set Channels (height)",
+            "parent_step": "None",
+            "time_weight": 1,
+            "used_devices": [
+              "xy"
+            ],
+            "description": "",
+            "is_active": true,
+            "channels_values": {
+              "Channels": [
+                "xy_height_param"
+              ],
+              "Values": [
+                "'MOVE_HEIGHT'"
+              ]
+            },
+            "wait_for_set": true
+          },
+          "Set Channels (position)": {
+            "step_type": "Set Channels",
+            "has_children": false,
+            "children": [],
+            "name": "position",
+            "full_name": "Set Channels (position)",
+            "parent_step": "None",
+            "time_weight": 1,
+            "used_devices": [
+              "xy"
+            ],
+            "description": "",
+            "is_active": true,
+            "channels_values": {
+              "Channels": [
+                "xy_position_param"
+              ],
+              "Values": [
+                "position"
+              ]
+            },
+            "wait_for_set": true
+          }
+        },
+        "plots": [],
+        "filename": "safe_move_data",
+        "variables": {
+          "position": "(40.0, 70.0)"
+        },
+        "loop_step_variables": {},
+        "channels": {},
+        "name": "move",
+        "use_nexus": false,
+        "measurement_description": "",
+        "tags": []
+      }
+    },
+    "Set Channels (heightclean)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "heightclean",
+      "full_name": "Set Channels (heightclean)",
+      "parent_step": "For Loop (For_Loop)",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_height_param"
+        ],
+        "Values": [
+          "'CLEANING_HEIGHT'"
+        ]
+      },
+      "wait_for_set": true
+    },
+    "Set Channels (fillhead)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "fillhead",
+      "full_name": "Set Channels (fillhead)",
+      "parent_step": "For Loop (For_Loop)",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_fill_head_param"
+        ],
+        "Values": [
+          "'CLEANING_VOLUME'"
+        ]
+      },
+      "wait_for_set": true
+    },
+    "Run Subprotocol (discardsolution)": {
+      "step_type": "Run Subprotocol",
+      "has_children": false,
+      "children": [],
+      "name": "discardsolution",
+      "full_name": "Run Subprotocol (discardsolution)",
+      "parent_step": "For Loop (For_Loop)",
+      "time_weight": 8,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "prot_path": "C:/Users/GuggenbergerB/AppData/Local/Programs/NOMAD-CAMELS/protocols/xyprotocols/discard_solution.cprot",
+      "vars_in": {
+        "Variable": [],
+        "Value": []
+      },
+      "vars_out": {
+        "Variable": [],
+        "Write to name": []
+      },
+      "data_output": "sub-stream",
+      "own_plots": true,
+      "_sub_protocol_dict": {
+        "description": "",
+        "export_csv": false,
+        "export_json": false,
+        "session_name": "",
+        "skip_config": false,
+        "h5_during_run": true,
+        "use_end_protocol": false,
+        "end_protocol": "",
+        "live_variable_update": false,
+        "allow_live_comments": false,
+        "flyer_data": [],
+        "instrument_aliases": {
+          "Instrument": [],
+          "Alias": []
+        },
+        "channel_aliases": {
+          "channel": [],
+          "Alias": []
+        },
+        "loop_steps": [
+          {
+            "step_type": "Set Channels",
+            "has_children": false,
+            "children": [],
+            "name": "change_volume",
+            "full_name": "Set Channels (change_volume)",
+            "parent_step": "None",
+            "time_weight": 1,
+            "used_devices": [
+              "xy"
+            ],
+            "description": "",
+            "is_active": true,
+            "channels_values": {
+              "Channels": [
+                "xy_change_volume_param"
+              ],
+              "Values": [
+                "'NEGATIVE_VOLUME'"
+              ]
+            },
+            "wait_for_set": true
+          },
+          {
+            "step_type": "Run Subprotocol",
+            "has_children": false,
+            "children": [],
+            "name": "movewaste",
+            "full_name": "Run Subprotocol (movewaste)",
+            "parent_step": "None",
+            "time_weight": 3,
+            "used_devices": [
+              "xy"
+            ],
+            "description": "",
+            "is_active": true,
+            "prot_path": "C:/Users/GuggenbergerB/AppData/Local/nomad_camels/python_files/move.cprot",
+            "vars_in": {
+              "Variable": [
+                "position"
+              ],
+              "Value": [
+                "'WASTE_POSITION'"
+              ]
+            },
+            "vars_out": {
+              "Variable": [],
+              "Write to name": []
+            },
+            "data_output": "sub-stream",
+            "own_plots": true,
+            "_sub_protocol_dict": {
+              "description": "",
+              "export_csv": false,
+              "export_json": false,
+              "session_name": "",
+              "skip_config": false,
+              "h5_during_run": true,
+              "use_end_protocol": false,
+              "end_protocol": "",
+              "live_variable_update": false,
+              "allow_live_comments": false,
+              "flyer_data": [],
+              "instrument_aliases": {
+                "Instrument": [],
+                "Alias": []
+              },
+              "channel_aliases": {
+                "channel": [],
+                "Alias": []
+              },
+              "loop_steps": [
+                {
+                  "step_type": "Set Channels",
+                  "has_children": false,
+                  "children": [],
+                  "name": "height",
+                  "full_name": "Set Channels (height)",
+                  "parent_step": "None",
+                  "time_weight": 1,
+                  "used_devices": [
+                    "xy"
+                  ],
+                  "description": "",
+                  "is_active": true,
+                  "channels_values": {
+                    "Channels": [
+                      "xy_height_param"
+                    ],
+                    "Values": [
+                      "'MOVE_HEIGHT'"
+                    ]
+                  },
+                  "wait_for_set": true
+                },
+                {
+                  "step_type": "Set Channels",
+                  "has_children": false,
+                  "children": [],
+                  "name": "position",
+                  "full_name": "Set Channels (position)",
+                  "parent_step": "None",
+                  "time_weight": 1,
+                  "used_devices": [
+                    "xy"
+                  ],
+                  "description": "",
+                  "is_active": true,
+                  "channels_values": {
+                    "Channels": [
+                      "xy_position_param"
+                    ],
+                    "Values": [
+                      "position"
+                    ]
+                  },
+                  "wait_for_set": true
+                }
+              ],
+              "loop_step_dict": {
+                "Set Channels (height)": {
+                  "step_type": "Set Channels",
+                  "has_children": false,
+                  "children": [],
+                  "name": "height",
+                  "full_name": "Set Channels (height)",
+                  "parent_step": "None",
+                  "time_weight": 1,
+                  "used_devices": [
+                    "xy"
+                  ],
+                  "description": "",
+                  "is_active": true,
+                  "channels_values": {
+                    "Channels": [
+                      "xy_height_param"
+                    ],
+                    "Values": [
+                      "'MOVE_HEIGHT'"
+                    ]
+                  },
+                  "wait_for_set": true
+                },
+                "Set Channels (position)": {
+                  "step_type": "Set Channels",
+                  "has_children": false,
+                  "children": [],
+                  "name": "position",
+                  "full_name": "Set Channels (position)",
+                  "parent_step": "None",
+                  "time_weight": 1,
+                  "used_devices": [
+                    "xy"
+                  ],
+                  "description": "",
+                  "is_active": true,
+                  "channels_values": {
+                    "Channels": [
+                      "xy_position_param"
+                    ],
+                    "Values": [
+                      "position"
+                    ]
+                  },
+                  "wait_for_set": true
+                }
+              },
+              "plots": [],
+              "filename": "safe_move_data",
+              "variables": {
+                "position": "CLEANING_POSITION"
+              },
+              "loop_step_variables": {},
+              "channels": {},
+              "name": "move",
+              "use_nexus": false,
+              "measurement_description": "",
+              "tags": []
+            }
+          },
+          {
+            "step_type": "Set Channels",
+            "has_children": false,
+            "children": [],
+            "name": "heightwaste",
+            "full_name": "Set Channels (heightwaste)",
+            "parent_step": "None",
+            "time_weight": 1,
+            "used_devices": [
+              "xy"
+            ],
+            "description": "",
+            "is_active": true,
+            "channels_values": {
+              "Channels": [
+                "xy_height_param"
+              ],
+              "Values": [
+                "'WASTE_HEIGHT'"
+              ]
+            },
+            "wait_for_set": true
+          },
+          {
+            "step_type": "Set Channels",
+            "has_children": false,
+            "children": [],
+            "name": "purge_head",
+            "full_name": "Set Channels (purge_head)",
+            "parent_step": "None",
+            "time_weight": 1,
+            "used_devices": [
+              "xy"
+            ],
+            "description": "",
+            "is_active": true,
+            "channels_values": {
+              "Channels": [
+                "xy_purge_head_param"
+              ],
+              "Values": [
+                "'PURGE_VOLUME'"
+              ]
+            },
+            "wait_for_set": true
+          },
+          {
+            "step_type": "Set Channels",
+            "has_children": false,
+            "children": [],
+            "name": "height_final",
+            "full_name": "Set Channels (height_final)",
+            "parent_step": "None",
+            "time_weight": 1,
+            "used_devices": [
+              "xy"
+            ],
+            "description": "",
+            "is_active": true,
+            "channels_values": {
+              "Channels": [
+                "xy_height_param"
+              ],
+              "Values": [
+                "'MOVE_HEIGHT'"
+              ]
+            },
+            "wait_for_set": true
+          }
+        ],
+        "loop_step_dict": {
+          "Set Channels (change_volume)": {
+            "step_type": "Set Channels",
+            "has_children": false,
+            "children": [],
+            "name": "change_volume",
+            "full_name": "Set Channels (change_volume)",
+            "parent_step": "None",
+            "time_weight": 1,
+            "used_devices": [
+              "xy"
+            ],
+            "description": "",
+            "is_active": true,
+            "channels_values": {
+              "Channels": [
+                "xy_change_volume_param"
+              ],
+              "Values": [
+                "'NEGATIVE_VOLUME'"
+              ]
+            },
+            "wait_for_set": true
+          },
+          "Run Subprotocol (movewaste)": {
+            "step_type": "Run Subprotocol",
+            "has_children": false,
+            "children": [],
+            "name": "movewaste",
+            "full_name": "Run Subprotocol (movewaste)",
+            "parent_step": "None",
+            "time_weight": 3,
+            "used_devices": [
+              "xy"
+            ],
+            "description": "",
+            "is_active": true,
+            "prot_path": "C:/Users/GuggenbergerB/AppData/Local/nomad_camels/python_files/move.cprot",
+            "vars_in": {
+              "Variable": [
+                "position"
+              ],
+              "Value": [
+                "'WASTE_POSITION'"
+              ]
+            },
+            "vars_out": {
+              "Variable": [],
+              "Write to name": []
+            },
+            "data_output": "sub-stream",
+            "own_plots": true,
+            "_sub_protocol_dict": {
+              "description": "",
+              "export_csv": false,
+              "export_json": false,
+              "session_name": "",
+              "skip_config": false,
+              "h5_during_run": true,
+              "use_end_protocol": false,
+              "end_protocol": "",
+              "live_variable_update": false,
+              "allow_live_comments": false,
+              "flyer_data": [],
+              "instrument_aliases": {
+                "Instrument": [],
+                "Alias": []
+              },
+              "channel_aliases": {
+                "channel": [],
+                "Alias": []
+              },
+              "loop_steps": [
+                {
+                  "step_type": "Set Channels",
+                  "has_children": false,
+                  "children": [],
+                  "name": "height",
+                  "full_name": "Set Channels (height)",
+                  "parent_step": "None",
+                  "time_weight": 1,
+                  "used_devices": [
+                    "xy"
+                  ],
+                  "description": "",
+                  "is_active": true,
+                  "channels_values": {
+                    "Channels": [
+                      "xy_height_param"
+                    ],
+                    "Values": [
+                      "'MOVE_HEIGHT'"
+                    ]
+                  },
+                  "wait_for_set": true
+                },
+                {
+                  "step_type": "Set Channels",
+                  "has_children": false,
+                  "children": [],
+                  "name": "position",
+                  "full_name": "Set Channels (position)",
+                  "parent_step": "None",
+                  "time_weight": 1,
+                  "used_devices": [
+                    "xy"
+                  ],
+                  "description": "",
+                  "is_active": true,
+                  "channels_values": {
+                    "Channels": [
+                      "xy_position_param"
+                    ],
+                    "Values": [
+                      "position"
+                    ]
+                  },
+                  "wait_for_set": true
+                }
+              ],
+              "loop_step_dict": {
+                "Set Channels (height)": {
+                  "step_type": "Set Channels",
+                  "has_children": false,
+                  "children": [],
+                  "name": "height",
+                  "full_name": "Set Channels (height)",
+                  "parent_step": "None",
+                  "time_weight": 1,
+                  "used_devices": [
+                    "xy"
+                  ],
+                  "description": "",
+                  "is_active": true,
+                  "channels_values": {
+                    "Channels": [
+                      "xy_height_param"
+                    ],
+                    "Values": [
+                      "'MOVE_HEIGHT'"
+                    ]
+                  },
+                  "wait_for_set": true
+                },
+                "Set Channels (position)": {
+                  "step_type": "Set Channels",
+                  "has_children": false,
+                  "children": [],
+                  "name": "position",
+                  "full_name": "Set Channels (position)",
+                  "parent_step": "None",
+                  "time_weight": 1,
+                  "used_devices": [
+                    "xy"
+                  ],
+                  "description": "",
+                  "is_active": true,
+                  "channels_values": {
+                    "Channels": [
+                      "xy_position_param"
+                    ],
+                    "Values": [
+                      "position"
+                    ]
+                  },
+                  "wait_for_set": true
+                }
+              },
+              "plots": [],
+              "filename": "safe_move_data",
+              "variables": {
+                "position": "CLEANING_POSITION"
+              },
+              "loop_step_variables": {},
+              "channels": {},
+              "name": "move",
+              "use_nexus": false,
+              "measurement_description": "",
+              "tags": []
+            }
+          },
+          "Set Channels (heightwaste)": {
+            "step_type": "Set Channels",
+            "has_children": false,
+            "children": [],
+            "name": "heightwaste",
+            "full_name": "Set Channels (heightwaste)",
+            "parent_step": "None",
+            "time_weight": 1,
+            "used_devices": [
+              "xy"
+            ],
+            "description": "",
+            "is_active": true,
+            "channels_values": {
+              "Channels": [
+                "xy_height_param"
+              ],
+              "Values": [
+                "'WASTE_HEIGHT'"
+              ]
+            },
+            "wait_for_set": true
+          },
+          "Set Channels (purge_head)": {
+            "step_type": "Set Channels",
+            "has_children": false,
+            "children": [],
+            "name": "purge_head",
+            "full_name": "Set Channels (purge_head)",
+            "parent_step": "None",
+            "time_weight": 1,
+            "used_devices": [
+              "xy"
+            ],
+            "description": "",
+            "is_active": true,
+            "channels_values": {
+              "Channels": [
+                "xy_purge_head_param"
+              ],
+              "Values": [
+                "'PURGE_VOLUME'"
+              ]
+            },
+            "wait_for_set": true
+          },
+          "Set Channels (height_final)": {
+            "step_type": "Set Channels",
+            "has_children": false,
+            "children": [],
+            "name": "height_final",
+            "full_name": "Set Channels (height_final)",
+            "parent_step": "None",
+            "time_weight": 1,
+            "used_devices": [
+              "xy"
+            ],
+            "description": "",
+            "is_active": true,
+            "channels_values": {
+              "Channels": [
+                "xy_height_param"
+              ],
+              "Values": [
+                "'MOVE_HEIGHT'"
+              ]
+            },
+            "wait_for_set": true
+          }
+        },
+        "plots": [],
+        "filename": "",
+        "variables": {},
+        "loop_step_variables": {},
+        "channels": {},
+        "name": "discard_solution",
+        "use_nexus": false,
+        "measurement_description": "",
+        "tags": []
+      }
+    }
+  },
+  "plots": [],
+  "filename": "",
+  "variables": {
+    "iterations": 2
+  },
+  "loop_step_variables": {},
+  "channels": {},
+  "name": "clean_head",
+  "use_nexus": false,
+  "measurement_description": "",
+  "tags": []
+}

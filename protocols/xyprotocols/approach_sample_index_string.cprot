@@ -1,0 +1,405 @@
+{
+  "description": "",
+  "export_csv": false,
+  "export_json": false,
+  "session_name": "",
+  "skip_config": false,
+  "h5_during_run": true,
+  "use_end_protocol": false,
+  "end_protocol": "",
+  "live_variable_update": false,
+  "allow_live_comments": false,
+  "flyer_data": [],
+  "instrument_aliases": {
+    "Instrument": [],
+    "Alias": []
+  },
+  "channel_aliases": {
+    "channel": [],
+    "Alias": []
+  },
+  "loop_steps": [
+    {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "height",
+      "full_name": "Set Channels (height)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_height_param"
+        ],
+        "Values": [
+          "'MOVE_HEIGHT'"
+        ]
+      },
+      "wait_for_set": true
+    },
+    {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "droppos",
+      "full_name": "Set Channels (droppos)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_position_drop"
+        ],
+        "Values": [
+          "positionindex"
+        ]
+      },
+      "wait_for_set": true
+    },
+    {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "apheight",
+      "full_name": "Set Channels (apheight)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_height_param"
+        ],
+        "Values": [
+          "'APPROACH_SAMPLE_HEIGHT'"
+        ]
+      },
+      "wait_for_set": true
+    },
+    {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "apr",
+      "full_name": "Set Channels (apr)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_approach_param"
+        ],
+        "Values": [
+          "'TARGET_GRAM_FORCE'"
+        ]
+      },
+      "wait_for_set": true
+    },
+    {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "mvheight",
+      "full_name": "Set Channels (mvheight)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_height_param"
+        ],
+        "Values": [
+          "'MOVE_HEIGHT'"
+        ]
+      },
+      "wait_for_set": true
+    },
+    {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "samplepos",
+      "full_name": "Set Channels (samplepos)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_position_sample"
+        ],
+        "Values": [
+          "positionindex"
+        ]
+      },
+      "wait_for_set": true
+    },
+    {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "approachheight",
+      "full_name": "Set Channels (approachheight)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_height_param"
+        ],
+        "Values": [
+          "'APPROACH_SAMPLE_HEIGHT'"
+        ]
+      },
+      "wait_for_set": true
+    },
+    {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "approach",
+      "full_name": "Set Channels (approach)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_approach_param"
+        ],
+        "Values": [
+          "'TARGET_GRAM_FORCE'"
+        ]
+      },
+      "wait_for_set": true
+    }
+  ],
+  "loop_step_dict": {
+    "Set Channels (height)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "height",
+      "full_name": "Set Channels (height)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_height_param"
+        ],
+        "Values": [
+          "'MOVE_HEIGHT'"
+        ]
+      },
+      "wait_for_set": true
+    },
+    "Set Channels (droppos)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "droppos",
+      "full_name": "Set Channels (droppos)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_position_drop"
+        ],
+        "Values": [
+          "positionindex"
+        ]
+      },
+      "wait_for_set": true
+    },
+    "Set Channels (apheight)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "apheight",
+      "full_name": "Set Channels (apheight)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_height_param"
+        ],
+        "Values": [
+          "'APPROACH_SAMPLE_HEIGHT'"
+        ]
+      },
+      "wait_for_set": true
+    },
+    "Set Channels (apr)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "apr",
+      "full_name": "Set Channels (apr)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_approach_param"
+        ],
+        "Values": [
+          "'TARGET_GRAM_FORCE'"
+        ]
+      },
+      "wait_for_set": true
+    },
+    "Set Channels (mvheight)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "mvheight",
+      "full_name": "Set Channels (mvheight)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_height_param"
+        ],
+        "Values": [
+          "'MOVE_HEIGHT'"
+        ]
+      },
+      "wait_for_set": true
+    },
+    "Set Channels (samplepos)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "samplepos",
+      "full_name": "Set Channels (samplepos)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_position_sample"
+        ],
+        "Values": [
+          "positionindex"
+        ]
+      },
+      "wait_for_set": true
+    },
+    "Set Channels (approachheight)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "approachheight",
+      "full_name": "Set Channels (approachheight)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_height_param"
+        ],
+        "Values": [
+          "'APPROACH_SAMPLE_HEIGHT'"
+        ]
+      },
+      "wait_for_set": true
+    },
+    "Set Channels (approach)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "approach",
+      "full_name": "Set Channels (approach)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_approach_param"
+        ],
+        "Values": [
+          "'TARGET_GRAM_FORCE'"
+        ]
+      },
+      "wait_for_set": true
+    }
+  },
+  "plots": [],
+  "filename": "",
+  "variables": {
+    "pointnumber": 12,
+    "positionindex": 4
+  },
+  "loop_step_variables": {},
+  "channels": {},
+  "name": "approach_sample_index_string",
+  "use_nexus": false,
+  "measurement_description": "",
+  "tags": []
+}

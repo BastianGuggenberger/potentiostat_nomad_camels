@@ -1,0 +1,350 @@
+{
+  "description": "",
+  "export_csv": false,
+  "export_json": false,
+  "session_name": "",
+  "skip_config": false,
+  "h5_during_run": true,
+  "use_end_protocol": false,
+  "end_protocol": "",
+  "live_variable_update": false,
+  "allow_live_comments": false,
+  "flyer_data": [],
+  "instrument_aliases": {
+    "Instrument": [],
+    "Alias": []
+  },
+  "channel_aliases": {
+    "channel": [],
+    "Alias": []
+  },
+  "loop_steps": [
+    {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "height",
+      "full_name": "Set Channels (height)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_height"
+        ],
+        "Values": [
+          "4.0"
+        ]
+      },
+      "wait_for_set": true
+    },
+    {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "setpoints",
+      "full_name": "Set Channels (setpoints)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_samplepoints"
+        ],
+        "Values": [
+          "'25.5,73.5;33.0,73.5;40.5,73.5;25.5,81.0;33.0,81.0;40.5,81.0;25.5,88.5;33.0,88.5;40.5,88.5'"
+        ]
+      },
+      "wait_for_set": true
+    },
+    {
+      "step_type": "Read Channels",
+      "has_children": false,
+      "children": [],
+      "name": "readpointnumber",
+      "full_name": "Read Channels (readpointnumber)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "read_all": false,
+      "split_trigger": false,
+      "channel_list": [
+        "xy_samplepointnumber"
+      ],
+      "skip_failed": [
+        false
+      ],
+      "read_variables": true
+    },
+    {
+      "step_type": "Set Variables",
+      "has_children": false,
+      "children": [],
+      "name": "setpointnumber",
+      "full_name": "Set Variables (setpointnumber)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "variables_values": {
+        "Variable": [
+          "points"
+        ],
+        "Value": [
+          "xy_samplepointnumber"
+        ]
+      }
+    },
+    {
+      "step_type": "For Loop",
+      "has_children": true,
+      "children": [
+        {
+          "step_type": "Set Channels",
+          "has_children": false,
+          "children": [],
+          "name": "Set_Channels",
+          "full_name": "Set Channels (Set_Channels)",
+          "parent_step": "For Loop (For_Loop)",
+          "time_weight": 1,
+          "used_devices": [
+            "xy"
+          ],
+          "description": "",
+          "is_active": true,
+          "channels_values": {
+            "Channels": [
+              "xy_position_sample"
+            ],
+            "Values": [
+              "For_Loop_Value"
+            ]
+          },
+          "wait_for_set": true
+        }
+      ],
+      "name": "For_Loop",
+      "full_name": "For Loop (For_Loop)",
+      "parent_step": "None",
+      "time_weight": 3,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "loop_type": "start - stop",
+      "start_val": "0",
+      "stop_val": "points-1",
+      "min_val": "",
+      "max_val": "",
+      "n_points": "15",
+      "sweep_mode": "linear",
+      "n_iterations": 2,
+      "val_list": [
+        0.0,
+        0.0
+      ],
+      "file_path": "",
+      "include_end_points": true,
+      "use_distance": true,
+      "point_distance": "1"
+    }
+  ],
+  "loop_step_dict": {
+    "Set Channels (height)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "height",
+      "full_name": "Set Channels (height)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_height"
+        ],
+        "Values": [
+          "4.0"
+        ]
+      },
+      "wait_for_set": true
+    },
+    "Set Channels (setpoints)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "setpoints",
+      "full_name": "Set Channels (setpoints)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_samplepoints"
+        ],
+        "Values": [
+          "'25.5,73.5;33.0,73.5;40.5,73.5;25.5,81.0;33.0,81.0;40.5,81.0;25.5,88.5;33.0,88.5;40.5,88.5'"
+        ]
+      },
+      "wait_for_set": true
+    },
+    "Read Channels (readpointnumber)": {
+      "step_type": "Read Channels",
+      "has_children": false,
+      "children": [],
+      "name": "readpointnumber",
+      "full_name": "Read Channels (readpointnumber)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "read_all": false,
+      "split_trigger": false,
+      "channel_list": [
+        "xy_samplepointnumber"
+      ],
+      "skip_failed": [
+        false
+      ],
+      "read_variables": true
+    },
+    "Set Variables (setpointnumber)": {
+      "step_type": "Set Variables",
+      "has_children": false,
+      "children": [],
+      "name": "setpointnumber",
+      "full_name": "Set Variables (setpointnumber)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "variables_values": {
+        "Variable": [
+          "points"
+        ],
+        "Value": [
+          "xy_samplepointnumber"
+        ]
+      }
+    },
+    "For Loop (For_Loop)": {
+      "step_type": "For Loop",
+      "has_children": true,
+      "children": [
+        {
+          "step_type": "Set Channels",
+          "has_children": false,
+          "children": [],
+          "name": "Set_Channels",
+          "full_name": "Set Channels (Set_Channels)",
+          "parent_step": "For Loop (For_Loop)",
+          "time_weight": 1,
+          "used_devices": [
+            "xy"
+          ],
+          "description": "",
+          "is_active": true,
+          "channels_values": {
+            "Channels": [
+              "xy_position_sample"
+            ],
+            "Values": [
+              "For_Loop_Value"
+            ]
+          },
+          "wait_for_set": true
+        }
+      ],
+      "name": "For_Loop",
+      "full_name": "For Loop (For_Loop)",
+      "parent_step": "None",
+      "time_weight": 3,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "loop_type": "start - stop",
+      "start_val": "0",
+      "stop_val": "points-1",
+      "min_val": "",
+      "max_val": "",
+      "n_points": "15",
+      "sweep_mode": "linear",
+      "n_iterations": 2,
+      "val_list": [
+        0.0,
+        0.0
+      ],
+      "file_path": "",
+      "include_end_points": true,
+      "use_distance": true,
+      "point_distance": "1"
+    },
+    "Set Channels (Set_Channels)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "Set_Channels",
+      "full_name": "Set Channels (Set_Channels)",
+      "parent_step": "For Loop (For_Loop)",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_position_sample"
+        ],
+        "Values": [
+          "For_Loop_Value"
+        ]
+      },
+      "wait_for_set": true
+    }
+  },
+  "plots": [],
+  "filename": "",
+  "variables": {
+    "For_Loop_Count": 0,
+    "For_Loop_Value": 0,
+    "points": 0
+  },
+  "loop_step_variables": {
+    "For_Loop_Count": 0,
+    "For_Loop_Value": 0
+  },
+  "channels": {},
+  "name": "SamplePosLoop",
+  "use_nexus": false,
+  "measurement_description": "",
+  "tags": []
+}

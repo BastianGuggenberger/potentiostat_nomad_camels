@@ -1,0 +1,324 @@
+{
+  "description": "",
+  "export_csv": false,
+  "export_json": false,
+  "session_name": "",
+  "skip_config": false,
+  "h5_during_run": true,
+  "use_end_protocol": false,
+  "end_protocol": "",
+  "live_variable_update": false,
+  "allow_live_comments": false,
+  "flyer_data": [],
+  "instrument_aliases": {
+    "Instrument": [],
+    "Alias": []
+  },
+  "channel_aliases": {
+    "channel": [],
+    "Alias": []
+  },
+  "loop_steps": [
+    {
+      "step_type": "Run Subprotocol",
+      "has_children": false,
+      "children": [],
+      "name": "drawsolutionreservoir",
+      "full_name": "Run Subprotocol (drawsolutionreservoir)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "prot_path": "C:/Users/GuggenbergerB/AppData/Local/Programs/NOMAD-CAMELS/protocols/xyprotocols/draw_solution_reservoir.cprot",
+      "vars_in": {
+        "Variable": [],
+        "Value": []
+      },
+      "vars_out": {
+        "Variable": [],
+        "Write to name": []
+      },
+      "data_output": "sub-stream",
+      "own_plots": true,
+      "_sub_protocol_dict": "None"
+    },
+    {
+      "step_type": "Run Subprotocol",
+      "has_children": false,
+      "children": [],
+      "name": "approachsample",
+      "full_name": "Run Subprotocol (approachsample)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "prot_path": "C:/Users/GuggenbergerB/AppData/Local/Programs/NOMAD-CAMELS/protocols/xyprotocols/approach_sample_index.cprot",
+      "vars_in": {
+        "Variable": [
+          "positionindex"
+        ],
+        "Value": [
+          0
+        ]
+      },
+      "vars_out": {
+        "Variable": [],
+        "Write to name": []
+      },
+      "data_output": "sub-stream",
+      "own_plots": true,
+      "_sub_protocol_dict": "None"
+    },
+    {
+      "step_type": "Run Subprotocol",
+      "has_children": false,
+      "children": [],
+      "name": "performCV",
+      "full_name": "Run Subprotocol (performCV)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "prot_path": "C:/Users/GuggenbergerB/AppData/Local/Programs/NOMAD-CAMELS/protocols/potentiostatprotocols/Protocol_CV_Real.cprot",
+      "vars_in": {
+        "Variable": [],
+        "Value": []
+      },
+      "vars_out": {
+        "Variable": [],
+        "Write to name": []
+      },
+      "data_output": "sub-stream",
+      "own_plots": true,
+      "_sub_protocol_dict": "None"
+    },
+    {
+      "step_type": "Run Subprotocol",
+      "has_children": false,
+      "children": [],
+      "name": "discardsolution",
+      "full_name": "Run Subprotocol (discardsolution)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "prot_path": "C:/Users/GuggenbergerB/AppData/Local/Programs/NOMAD-CAMELS/protocols/xyprotocols/discard_solution.cprot",
+      "vars_in": {
+        "Variable": [],
+        "Value": []
+      },
+      "vars_out": {
+        "Variable": [],
+        "Write to name": []
+      },
+      "data_output": "sub-stream",
+      "own_plots": true,
+      "_sub_protocol_dict": "None"
+    },
+    {
+      "step_type": "Run Subprotocol",
+      "has_children": false,
+      "children": [],
+      "name": "cleanhead",
+      "full_name": "Run Subprotocol (cleanhead)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "prot_path": "C:/Users/GuggenbergerB/AppData/Local/Programs/NOMAD-CAMELS/protocols/xyprotocols/clean_head.cprot",
+      "vars_in": {
+        "Variable": [],
+        "Value": []
+      },
+      "vars_out": {
+        "Variable": [],
+        "Write to name": []
+      },
+      "data_output": "sub-stream",
+      "own_plots": true,
+      "_sub_protocol_dict": "None"
+    },
+    {
+      "step_type": "Read Channels",
+      "has_children": false,
+      "children": [],
+      "name": "volumezero",
+      "full_name": "Read Channels (volumezero)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "read_all": false,
+      "split_trigger": false,
+      "channel_list": [
+        "xy_volume_zero"
+      ],
+      "skip_failed": [
+        false
+      ],
+      "read_variables": true
+    }
+  ],
+  "loop_step_dict": {
+    "Run Subprotocol (drawsolutionreservoir)": {
+      "step_type": "Run Subprotocol",
+      "has_children": false,
+      "children": [],
+      "name": "drawsolutionreservoir",
+      "full_name": "Run Subprotocol (drawsolutionreservoir)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "prot_path": "C:/Users/GuggenbergerB/AppData/Local/Programs/NOMAD-CAMELS/protocols/xyprotocols/draw_solution_reservoir.cprot",
+      "vars_in": {
+        "Variable": [],
+        "Value": []
+      },
+      "vars_out": {
+        "Variable": [],
+        "Write to name": []
+      },
+      "data_output": "sub-stream",
+      "own_plots": true,
+      "_sub_protocol_dict": "None"
+    },
+    "Run Subprotocol (approachsample)": {
+      "step_type": "Run Subprotocol",
+      "has_children": false,
+      "children": [],
+      "name": "approachsample",
+      "full_name": "Run Subprotocol (approachsample)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "prot_path": "C:/Users/GuggenbergerB/AppData/Local/Programs/NOMAD-CAMELS/protocols/xyprotocols/approach_sample_index.cprot",
+      "vars_in": {
+        "Variable": [
+          "positionindex"
+        ],
+        "Value": [
+          0
+        ]
+      },
+      "vars_out": {
+        "Variable": [],
+        "Write to name": []
+      },
+      "data_output": "sub-stream",
+      "own_plots": true,
+      "_sub_protocol_dict": "None"
+    },
+    "Run Subprotocol (performCV)": {
+      "step_type": "Run Subprotocol",
+      "has_children": false,
+      "children": [],
+      "name": "performCV",
+      "full_name": "Run Subprotocol (performCV)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "prot_path": "C:/Users/GuggenbergerB/AppData/Local/Programs/NOMAD-CAMELS/protocols/potentiostatprotocols/Protocol_CV_Real.cprot",
+      "vars_in": {
+        "Variable": [],
+        "Value": []
+      },
+      "vars_out": {
+        "Variable": [],
+        "Write to name": []
+      },
+      "data_output": "sub-stream",
+      "own_plots": true,
+      "_sub_protocol_dict": "None"
+    },
+    "Run Subprotocol (discardsolution)": {
+      "step_type": "Run Subprotocol",
+      "has_children": false,
+      "children": [],
+      "name": "discardsolution",
+      "full_name": "Run Subprotocol (discardsolution)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "prot_path": "C:/Users/GuggenbergerB/AppData/Local/Programs/NOMAD-CAMELS/protocols/xyprotocols/discard_solution.cprot",
+      "vars_in": {
+        "Variable": [],
+        "Value": []
+      },
+      "vars_out": {
+        "Variable": [],
+        "Write to name": []
+      },
+      "data_output": "sub-stream",
+      "own_plots": true,
+      "_sub_protocol_dict": "None"
+    },
+    "Run Subprotocol (cleanhead)": {
+      "step_type": "Run Subprotocol",
+      "has_children": false,
+      "children": [],
+      "name": "cleanhead",
+      "full_name": "Run Subprotocol (cleanhead)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "prot_path": "C:/Users/GuggenbergerB/AppData/Local/Programs/NOMAD-CAMELS/protocols/xyprotocols/clean_head.cprot",
+      "vars_in": {
+        "Variable": [],
+        "Value": []
+      },
+      "vars_out": {
+        "Variable": [],
+        "Write to name": []
+      },
+      "data_output": "sub-stream",
+      "own_plots": true,
+      "_sub_protocol_dict": "None"
+    },
+    "Read Channels (volumezero)": {
+      "step_type": "Read Channels",
+      "has_children": false,
+      "children": [],
+      "name": "volumezero",
+      "full_name": "Read Channels (volumezero)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "read_all": false,
+      "split_trigger": false,
+      "channel_list": [
+        "xy_volume_zero"
+      ],
+      "skip_failed": [
+        false
+      ],
+      "read_variables": true
+    }
+  },
+  "plots": [],
+  "filename": "",
+  "variables": {},
+  "loop_step_variables": {},
+  "channels": {},
+  "name": "CVMeasurement",
+  "use_nexus": false,
+  "measurement_description": "",
+  "tags": []
+}

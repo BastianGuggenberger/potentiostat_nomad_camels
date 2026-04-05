@@ -1,0 +1,80 @@
+{
+  "description": "",
+  "export_csv": false,
+  "export_json": false,
+  "session_name": "",
+  "skip_config": false,
+  "h5_during_run": true,
+  "use_end_protocol": false,
+  "end_protocol": "",
+  "live_variable_update": false,
+  "allow_live_comments": false,
+  "flyer_data": [],
+  "instrument_aliases": {
+    "Instrument": [],
+    "Alias": []
+  },
+  "channel_aliases": {
+    "channel": [],
+    "Alias": []
+  },
+  "loop_steps": [
+    {
+      "step_type": "Read Channels",
+      "has_children": false,
+      "children": [],
+      "name": "home",
+      "full_name": "Read Channels (home)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "read_all": false,
+      "split_trigger": false,
+      "channel_list": [
+        "xy_home"
+      ],
+      "skip_failed": [
+        false
+      ],
+      "read_variables": true
+    }
+  ],
+  "loop_step_dict": {
+    "Read Channels (home)": {
+      "step_type": "Read Channels",
+      "has_children": false,
+      "children": [],
+      "name": "home",
+      "full_name": "Read Channels (home)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "read_all": false,
+      "split_trigger": false,
+      "channel_list": [
+        "xy_home"
+      ],
+      "skip_failed": [
+        false
+      ],
+      "read_variables": true
+    }
+  },
+  "plots": [],
+  "filename": "home_data",
+  "variables": {},
+  "loop_step_variables": {},
+  "channels": {},
+  "name": "home",
+  "use_nexus": false,
+  "measurement_description": "",
+  "tags": []
+}

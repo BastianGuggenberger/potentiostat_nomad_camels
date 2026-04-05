@@ -1,0 +1,1414 @@
+{
+  "description": "",
+  "export_csv": false,
+  "export_json": false,
+  "session_name": "",
+  "skip_config": false,
+  "h5_during_run": true,
+  "use_end_protocol": false,
+  "end_protocol": "",
+  "live_variable_update": false,
+  "allow_live_comments": false,
+  "flyer_data": [],
+  "instrument_aliases": {
+    "Instrument": [],
+    "Alias": []
+  },
+  "channel_aliases": {
+    "channel": [],
+    "Alias": []
+  },
+  "loop_steps": [
+    {
+      "step_type": "For Loop",
+      "has_children": true,
+      "children": [
+        {
+          "step_type": "Set Channels",
+          "has_children": false,
+          "children": [],
+          "name": "SetU0",
+          "full_name": "Set Channels (SetU0)",
+          "parent_step": "For Loop (StarttoMin)",
+          "time_weight": 1,
+          "used_devices": [
+            "Potentiostat"
+          ],
+          "description": "",
+          "is_active": true,
+          "channels_values": {
+            "Channels": [
+              "Potentiostat_U"
+            ],
+            "Values": [
+              "StarttoMin_Value"
+            ]
+          },
+          "wait_for_set": true
+        },
+        {
+          "step_type": "Wait",
+          "has_children": false,
+          "children": [],
+          "name": "Wait0",
+          "full_name": "Wait (Wait0)",
+          "parent_step": "For Loop (StarttoMin)",
+          "time_weight": 1,
+          "used_devices": [],
+          "description": "",
+          "is_active": true,
+          "wait_time": "waitingtime",
+          "wait_type": "simple wait",
+          "skipable": true,
+          "condition": "",
+          "read_channels": [],
+          "skip_failed": []
+        },
+        {
+          "step_type": "Read Channels",
+          "has_children": false,
+          "children": [],
+          "name": "readi0",
+          "full_name": "Read Channels (readi0)",
+          "parent_step": "For Loop (StarttoMin)",
+          "time_weight": 1,
+          "used_devices": [
+            "Potentiostat"
+          ],
+          "description": "",
+          "is_active": true,
+          "read_all": false,
+          "split_trigger": false,
+          "channel_list": [
+            "Potentiostat_I",
+            "Potentiostat_U"
+          ],
+          "skip_failed": [
+            false,
+            false
+          ],
+          "read_variables": true
+        }
+      ],
+      "name": "StarttoMin",
+      "full_name": "For Loop (StarttoMin)",
+      "parent_step": "None",
+      "time_weight": 199,
+      "used_devices": [
+        "Potentiostat"
+      ],
+      "description": "",
+      "is_active": true,
+      "loop_type": "start - stop",
+      "start_val": "start_V",
+      "stop_val": "min_V",
+      "min_val": "",
+      "max_val": "",
+      "n_points": "100",
+      "sweep_mode": "linear",
+      "n_iterations": 66,
+      "val_list": [],
+      "file_path": "",
+      "include_end_points": true,
+      "use_distance": true,
+      "point_distance": "deltaV"
+    },
+    {
+      "step_type": "For Loop",
+      "has_children": true,
+      "children": [
+        {
+          "step_type": "For Loop",
+          "has_children": true,
+          "children": [
+            {
+              "step_type": "Set Channels",
+              "has_children": false,
+              "children": [],
+              "name": "Set_U",
+              "full_name": "Set Channels (Set_U)",
+              "parent_step": "For Loop (Voltage_Loop_Up)",
+              "time_weight": 1,
+              "used_devices": [
+                "Potentiostat"
+              ],
+              "description": "",
+              "is_active": true,
+              "channels_values": {
+                "Channels": [
+                  "Potentiostat_U"
+                ],
+                "Values": [
+                  "Voltage_Loop_Up_Value"
+                ]
+              },
+              "wait_for_set": true
+            },
+            {
+              "step_type": "Wait",
+              "has_children": false,
+              "children": [],
+              "name": "Wait",
+              "full_name": "Wait (Wait)",
+              "parent_step": "For Loop (Voltage_Loop_Up)",
+              "time_weight": 1,
+              "used_devices": [],
+              "description": "",
+              "is_active": true,
+              "wait_time": "waitingtime",
+              "wait_type": "simple wait",
+              "skipable": true,
+              "condition": "",
+              "read_channels": [],
+              "skip_failed": []
+            },
+            {
+              "step_type": "Read Channels",
+              "has_children": false,
+              "children": [],
+              "name": "Read_CV",
+              "full_name": "Read Channels (Read_CV)",
+              "parent_step": "For Loop (Voltage_Loop_Up)",
+              "time_weight": 1,
+              "used_devices": [
+                "Potentiostat"
+              ],
+              "description": "",
+              "is_active": true,
+              "read_all": false,
+              "split_trigger": false,
+              "channel_list": [
+                "Potentiostat_I",
+                "Potentiostat_U"
+              ],
+              "skip_failed": [
+                false,
+                false
+              ],
+              "read_variables": true
+            }
+          ],
+          "name": "Voltage_Loop_Up",
+          "full_name": "For Loop (Voltage_Loop_Up)",
+          "parent_step": "For Loop (CyclesLoop)",
+          "time_weight": 349,
+          "used_devices": [
+            "Potentiostat"
+          ],
+          "description": "",
+          "is_active": true,
+          "loop_type": "start - stop",
+          "start_val": "min_V",
+          "stop_val": "max_V",
+          "min_val": "",
+          "max_val": "",
+          "n_points": "100",
+          "sweep_mode": "linear",
+          "n_iterations": 116,
+          "val_list": [],
+          "file_path": "",
+          "include_end_points": true,
+          "use_distance": true,
+          "point_distance": "deltaV"
+        },
+        {
+          "step_type": "For Loop",
+          "has_children": true,
+          "children": [
+            {
+              "step_type": "Set Channels",
+              "has_children": false,
+              "children": [],
+              "name": "Set_U_1",
+              "full_name": "Set Channels (Set_U_1)",
+              "parent_step": "For Loop (Voltage_Loop_Down)",
+              "time_weight": 1,
+              "used_devices": [
+                "Potentiostat"
+              ],
+              "description": "",
+              "is_active": true,
+              "channels_values": {
+                "Channels": [
+                  "Potentiostat_U"
+                ],
+                "Values": [
+                  "Voltage_Loop_Down_Value"
+                ]
+              },
+              "wait_for_set": true
+            },
+            {
+              "step_type": "Wait",
+              "has_children": false,
+              "children": [],
+              "name": "Wait_1",
+              "full_name": "Wait (Wait_1)",
+              "parent_step": "For Loop (Voltage_Loop_Down)",
+              "time_weight": 1,
+              "used_devices": [],
+              "description": "",
+              "is_active": true,
+              "wait_time": "waitingtime",
+              "wait_type": "simple wait",
+              "skipable": true,
+              "condition": "",
+              "read_channels": [],
+              "skip_failed": []
+            },
+            {
+              "step_type": "Read Channels",
+              "has_children": false,
+              "children": [],
+              "name": "Read_CV_1",
+              "full_name": "Read Channels (Read_CV_1)",
+              "parent_step": "For Loop (Voltage_Loop_Down)",
+              "time_weight": 1,
+              "used_devices": [
+                "Potentiostat"
+              ],
+              "description": "",
+              "is_active": true,
+              "read_all": false,
+              "split_trigger": false,
+              "channel_list": [
+                "Potentiostat_I",
+                "Potentiostat_U"
+              ],
+              "skip_failed": [
+                false,
+                false
+              ],
+              "read_variables": true
+            }
+          ],
+          "name": "Voltage_Loop_Down",
+          "full_name": "For Loop (Voltage_Loop_Down)",
+          "parent_step": "For Loop (CyclesLoop)",
+          "time_weight": 349,
+          "used_devices": [
+            "Potentiostat"
+          ],
+          "description": "",
+          "is_active": true,
+          "loop_type": "start - stop",
+          "start_val": "max_V",
+          "stop_val": "min_V",
+          "min_val": "",
+          "max_val": "",
+          "n_points": "100",
+          "sweep_mode": "linear",
+          "n_iterations": 116,
+          "val_list": [],
+          "file_path": "",
+          "include_end_points": true,
+          "use_distance": true,
+          "point_distance": "deltaV"
+        }
+      ],
+      "name": "CyclesLoop",
+      "full_name": "For Loop (CyclesLoop)",
+      "parent_step": "None",
+      "time_weight": 699,
+      "used_devices": [
+        "Potentiostat"
+      ],
+      "description": "",
+      "is_active": true,
+      "loop_type": "start - stop",
+      "start_val": "1",
+      "stop_val": "cycles",
+      "min_val": "",
+      "max_val": "",
+      "n_points": "cycles",
+      "sweep_mode": "linear",
+      "n_iterations": 1,
+      "val_list": [],
+      "file_path": "",
+      "include_end_points": true,
+      "use_distance": false,
+      "point_distance": "nan"
+    },
+    {
+      "step_type": "For Loop",
+      "has_children": true,
+      "children": [
+        {
+          "step_type": "Set Channels",
+          "has_children": false,
+          "children": [],
+          "name": "SetU2",
+          "full_name": "Set Channels (SetU2)",
+          "parent_step": "For Loop (MintoLast)",
+          "time_weight": 1,
+          "used_devices": [
+            "Potentiostat"
+          ],
+          "description": "",
+          "is_active": true,
+          "channels_values": {
+            "Channels": [
+              "Potentiostat_U"
+            ],
+            "Values": [
+              "MintoLast_Value"
+            ]
+          },
+          "wait_for_set": true
+        },
+        {
+          "step_type": "Wait",
+          "has_children": false,
+          "children": [],
+          "name": "Wait2",
+          "full_name": "Wait (Wait2)",
+          "parent_step": "For Loop (MintoLast)",
+          "time_weight": 1,
+          "used_devices": [],
+          "description": "",
+          "is_active": true,
+          "wait_time": "waitingtime",
+          "wait_type": "simple wait",
+          "skipable": true,
+          "condition": "",
+          "read_channels": [],
+          "skip_failed": []
+        },
+        {
+          "step_type": "Read Channels",
+          "has_children": false,
+          "children": [],
+          "name": "readi2",
+          "full_name": "Read Channels (readi2)",
+          "parent_step": "For Loop (MintoLast)",
+          "time_weight": 1,
+          "used_devices": [
+            "Potentiostat"
+          ],
+          "description": "",
+          "is_active": true,
+          "read_all": false,
+          "split_trigger": false,
+          "channel_list": [
+            "Potentiostat_I",
+            "Potentiostat_U"
+          ],
+          "skip_failed": [
+            false,
+            false
+          ],
+          "read_variables": true
+        }
+      ],
+      "name": "MintoLast",
+      "full_name": "For Loop (MintoLast)",
+      "parent_step": "None",
+      "time_weight": 199,
+      "used_devices": [
+        "Potentiostat"
+      ],
+      "description": "",
+      "is_active": true,
+      "loop_type": "start - stop",
+      "start_val": "min_V",
+      "stop_val": "last_V",
+      "min_val": "",
+      "max_val": "",
+      "n_points": "100",
+      "sweep_mode": "linear",
+      "n_iterations": 66,
+      "val_list": [],
+      "file_path": "",
+      "include_end_points": true,
+      "use_distance": true,
+      "point_distance": "deltaV"
+    }
+  ],
+  "loop_step_dict": {
+    "For Loop (StarttoMin)": {
+      "step_type": "For Loop",
+      "has_children": true,
+      "children": [
+        {
+          "step_type": "Set Channels",
+          "has_children": false,
+          "children": [],
+          "name": "SetU0",
+          "full_name": "Set Channels (SetU0)",
+          "parent_step": "For Loop (StarttoMin)",
+          "time_weight": 1,
+          "used_devices": [
+            "Potentiostat"
+          ],
+          "description": "",
+          "is_active": true,
+          "channels_values": {
+            "Channels": [
+              "Potentiostat_U"
+            ],
+            "Values": [
+              "StarttoMin_Value"
+            ]
+          },
+          "wait_for_set": true
+        },
+        {
+          "step_type": "Wait",
+          "has_children": false,
+          "children": [],
+          "name": "Wait0",
+          "full_name": "Wait (Wait0)",
+          "parent_step": "For Loop (StarttoMin)",
+          "time_weight": 1,
+          "used_devices": [],
+          "description": "",
+          "is_active": true,
+          "wait_time": "waitingtime",
+          "wait_type": "simple wait",
+          "skipable": true,
+          "condition": "",
+          "read_channels": [],
+          "skip_failed": []
+        },
+        {
+          "step_type": "Read Channels",
+          "has_children": false,
+          "children": [],
+          "name": "readi0",
+          "full_name": "Read Channels (readi0)",
+          "parent_step": "For Loop (StarttoMin)",
+          "time_weight": 1,
+          "used_devices": [
+            "Potentiostat"
+          ],
+          "description": "",
+          "is_active": true,
+          "read_all": false,
+          "split_trigger": false,
+          "channel_list": [
+            "Potentiostat_I",
+            "Potentiostat_U"
+          ],
+          "skip_failed": [
+            false,
+            false
+          ],
+          "read_variables": true
+        }
+      ],
+      "name": "StarttoMin",
+      "full_name": "For Loop (StarttoMin)",
+      "parent_step": "None",
+      "time_weight": 199,
+      "used_devices": [
+        "Potentiostat"
+      ],
+      "description": "",
+      "is_active": true,
+      "loop_type": "start - stop",
+      "start_val": "start_V",
+      "stop_val": "min_V",
+      "min_val": "",
+      "max_val": "",
+      "n_points": "100",
+      "sweep_mode": "linear",
+      "n_iterations": 66,
+      "val_list": [],
+      "file_path": "",
+      "include_end_points": true,
+      "use_distance": true,
+      "point_distance": "deltaV"
+    },
+    "Set Channels (SetU0)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "SetU0",
+      "full_name": "Set Channels (SetU0)",
+      "parent_step": "For Loop (StarttoMin)",
+      "time_weight": 1,
+      "used_devices": [
+        "Potentiostat"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "Potentiostat_U"
+        ],
+        "Values": [
+          "StarttoMin_Value"
+        ]
+      },
+      "wait_for_set": true
+    },
+    "Wait (Wait0)": {
+      "step_type": "Wait",
+      "has_children": false,
+      "children": [],
+      "name": "Wait0",
+      "full_name": "Wait (Wait0)",
+      "parent_step": "For Loop (StarttoMin)",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "wait_time": "waitingtime",
+      "wait_type": "simple wait",
+      "skipable": true,
+      "condition": "",
+      "read_channels": [],
+      "skip_failed": []
+    },
+    "Read Channels (readi0)": {
+      "step_type": "Read Channels",
+      "has_children": false,
+      "children": [],
+      "name": "readi0",
+      "full_name": "Read Channels (readi0)",
+      "parent_step": "For Loop (StarttoMin)",
+      "time_weight": 1,
+      "used_devices": [
+        "Potentiostat"
+      ],
+      "description": "",
+      "is_active": true,
+      "read_all": false,
+      "split_trigger": false,
+      "channel_list": [
+        "Potentiostat_I",
+        "Potentiostat_U"
+      ],
+      "skip_failed": [
+        false,
+        false
+      ],
+      "read_variables": true
+    },
+    "For Loop (CyclesLoop)": {
+      "step_type": "For Loop",
+      "has_children": true,
+      "children": [
+        {
+          "step_type": "For Loop",
+          "has_children": true,
+          "children": [
+            {
+              "step_type": "Set Channels",
+              "has_children": false,
+              "children": [],
+              "name": "Set_U",
+              "full_name": "Set Channels (Set_U)",
+              "parent_step": "For Loop (Voltage_Loop_Up)",
+              "time_weight": 1,
+              "used_devices": [
+                "Potentiostat"
+              ],
+              "description": "",
+              "is_active": true,
+              "channels_values": {
+                "Channels": [
+                  "Potentiostat_U"
+                ],
+                "Values": [
+                  "Voltage_Loop_Up_Value"
+                ]
+              },
+              "wait_for_set": true
+            },
+            {
+              "step_type": "Wait",
+              "has_children": false,
+              "children": [],
+              "name": "Wait",
+              "full_name": "Wait (Wait)",
+              "parent_step": "For Loop (Voltage_Loop_Up)",
+              "time_weight": 1,
+              "used_devices": [],
+              "description": "",
+              "is_active": true,
+              "wait_time": "waitingtime",
+              "wait_type": "simple wait",
+              "skipable": true,
+              "condition": "",
+              "read_channels": [],
+              "skip_failed": []
+            },
+            {
+              "step_type": "Read Channels",
+              "has_children": false,
+              "children": [],
+              "name": "Read_CV",
+              "full_name": "Read Channels (Read_CV)",
+              "parent_step": "For Loop (Voltage_Loop_Up)",
+              "time_weight": 1,
+              "used_devices": [
+                "Potentiostat"
+              ],
+              "description": "",
+              "is_active": true,
+              "read_all": false,
+              "split_trigger": false,
+              "channel_list": [
+                "Potentiostat_I",
+                "Potentiostat_U"
+              ],
+              "skip_failed": [
+                false,
+                false
+              ],
+              "read_variables": true
+            }
+          ],
+          "name": "Voltage_Loop_Up",
+          "full_name": "For Loop (Voltage_Loop_Up)",
+          "parent_step": "For Loop (CyclesLoop)",
+          "time_weight": 349,
+          "used_devices": [
+            "Potentiostat"
+          ],
+          "description": "",
+          "is_active": true,
+          "loop_type": "start - stop",
+          "start_val": "min_V",
+          "stop_val": "max_V",
+          "min_val": "",
+          "max_val": "",
+          "n_points": "100",
+          "sweep_mode": "linear",
+          "n_iterations": 116,
+          "val_list": [],
+          "file_path": "",
+          "include_end_points": true,
+          "use_distance": true,
+          "point_distance": "deltaV"
+        },
+        {
+          "step_type": "For Loop",
+          "has_children": true,
+          "children": [
+            {
+              "step_type": "Set Channels",
+              "has_children": false,
+              "children": [],
+              "name": "Set_U_1",
+              "full_name": "Set Channels (Set_U_1)",
+              "parent_step": "For Loop (Voltage_Loop_Down)",
+              "time_weight": 1,
+              "used_devices": [
+                "Potentiostat"
+              ],
+              "description": "",
+              "is_active": true,
+              "channels_values": {
+                "Channels": [
+                  "Potentiostat_U"
+                ],
+                "Values": [
+                  "Voltage_Loop_Down_Value"
+                ]
+              },
+              "wait_for_set": true
+            },
+            {
+              "step_type": "Wait",
+              "has_children": false,
+              "children": [],
+              "name": "Wait_1",
+              "full_name": "Wait (Wait_1)",
+              "parent_step": "For Loop (Voltage_Loop_Down)",
+              "time_weight": 1,
+              "used_devices": [],
+              "description": "",
+              "is_active": true,
+              "wait_time": "waitingtime",
+              "wait_type": "simple wait",
+              "skipable": true,
+              "condition": "",
+              "read_channels": [],
+              "skip_failed": []
+            },
+            {
+              "step_type": "Read Channels",
+              "has_children": false,
+              "children": [],
+              "name": "Read_CV_1",
+              "full_name": "Read Channels (Read_CV_1)",
+              "parent_step": "For Loop (Voltage_Loop_Down)",
+              "time_weight": 1,
+              "used_devices": [
+                "Potentiostat"
+              ],
+              "description": "",
+              "is_active": true,
+              "read_all": false,
+              "split_trigger": false,
+              "channel_list": [
+                "Potentiostat_I",
+                "Potentiostat_U"
+              ],
+              "skip_failed": [
+                false,
+                false
+              ],
+              "read_variables": true
+            }
+          ],
+          "name": "Voltage_Loop_Down",
+          "full_name": "For Loop (Voltage_Loop_Down)",
+          "parent_step": "For Loop (CyclesLoop)",
+          "time_weight": 349,
+          "used_devices": [
+            "Potentiostat"
+          ],
+          "description": "",
+          "is_active": true,
+          "loop_type": "start - stop",
+          "start_val": "max_V",
+          "stop_val": "min_V",
+          "min_val": "",
+          "max_val": "",
+          "n_points": "100",
+          "sweep_mode": "linear",
+          "n_iterations": 116,
+          "val_list": [],
+          "file_path": "",
+          "include_end_points": true,
+          "use_distance": true,
+          "point_distance": "deltaV"
+        }
+      ],
+      "name": "CyclesLoop",
+      "full_name": "For Loop (CyclesLoop)",
+      "parent_step": "None",
+      "time_weight": 699,
+      "used_devices": [
+        "Potentiostat"
+      ],
+      "description": "",
+      "is_active": true,
+      "loop_type": "start - stop",
+      "start_val": "1",
+      "stop_val": "cycles",
+      "min_val": "",
+      "max_val": "",
+      "n_points": "cycles",
+      "sweep_mode": "linear",
+      "n_iterations": 1,
+      "val_list": [],
+      "file_path": "",
+      "include_end_points": true,
+      "use_distance": false,
+      "point_distance": "nan"
+    },
+    "For Loop (Voltage_Loop_Up)": {
+      "step_type": "For Loop",
+      "has_children": true,
+      "children": [
+        {
+          "step_type": "Set Channels",
+          "has_children": false,
+          "children": [],
+          "name": "Set_U",
+          "full_name": "Set Channels (Set_U)",
+          "parent_step": "For Loop (Voltage_Loop_Up)",
+          "time_weight": 1,
+          "used_devices": [
+            "Potentiostat"
+          ],
+          "description": "",
+          "is_active": true,
+          "channels_values": {
+            "Channels": [
+              "Potentiostat_U"
+            ],
+            "Values": [
+              "Voltage_Loop_Up_Value"
+            ]
+          },
+          "wait_for_set": true
+        },
+        {
+          "step_type": "Wait",
+          "has_children": false,
+          "children": [],
+          "name": "Wait",
+          "full_name": "Wait (Wait)",
+          "parent_step": "For Loop (Voltage_Loop_Up)",
+          "time_weight": 1,
+          "used_devices": [],
+          "description": "",
+          "is_active": true,
+          "wait_time": "waitingtime",
+          "wait_type": "simple wait",
+          "skipable": true,
+          "condition": "",
+          "read_channels": [],
+          "skip_failed": []
+        },
+        {
+          "step_type": "Read Channels",
+          "has_children": false,
+          "children": [],
+          "name": "Read_CV",
+          "full_name": "Read Channels (Read_CV)",
+          "parent_step": "For Loop (Voltage_Loop_Up)",
+          "time_weight": 1,
+          "used_devices": [
+            "Potentiostat"
+          ],
+          "description": "",
+          "is_active": true,
+          "read_all": false,
+          "split_trigger": false,
+          "channel_list": [
+            "Potentiostat_I",
+            "Potentiostat_U"
+          ],
+          "skip_failed": [
+            false,
+            false
+          ],
+          "read_variables": true
+        }
+      ],
+      "name": "Voltage_Loop_Up",
+      "full_name": "For Loop (Voltage_Loop_Up)",
+      "parent_step": "For Loop (CyclesLoop)",
+      "time_weight": 349,
+      "used_devices": [
+        "Potentiostat"
+      ],
+      "description": "",
+      "is_active": true,
+      "loop_type": "start - stop",
+      "start_val": "min_V",
+      "stop_val": "max_V",
+      "min_val": "",
+      "max_val": "",
+      "n_points": "100",
+      "sweep_mode": "linear",
+      "n_iterations": 116,
+      "val_list": [],
+      "file_path": "",
+      "include_end_points": true,
+      "use_distance": true,
+      "point_distance": "deltaV"
+    },
+    "Set Channels (Set_U)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "Set_U",
+      "full_name": "Set Channels (Set_U)",
+      "parent_step": "For Loop (Voltage_Loop_Up)",
+      "time_weight": 1,
+      "used_devices": [
+        "Potentiostat"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "Potentiostat_U"
+        ],
+        "Values": [
+          "Voltage_Loop_Up_Value"
+        ]
+      },
+      "wait_for_set": true
+    },
+    "Wait (Wait)": {
+      "step_type": "Wait",
+      "has_children": false,
+      "children": [],
+      "name": "Wait",
+      "full_name": "Wait (Wait)",
+      "parent_step": "For Loop (Voltage_Loop_Up)",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "wait_time": "waitingtime",
+      "wait_type": "simple wait",
+      "skipable": true,
+      "condition": "",
+      "read_channels": [],
+      "skip_failed": []
+    },
+    "Read Channels (Read_CV)": {
+      "step_type": "Read Channels",
+      "has_children": false,
+      "children": [],
+      "name": "Read_CV",
+      "full_name": "Read Channels (Read_CV)",
+      "parent_step": "For Loop (Voltage_Loop_Up)",
+      "time_weight": 1,
+      "used_devices": [
+        "Potentiostat"
+      ],
+      "description": "",
+      "is_active": true,
+      "read_all": false,
+      "split_trigger": false,
+      "channel_list": [
+        "Potentiostat_I",
+        "Potentiostat_U"
+      ],
+      "skip_failed": [
+        false,
+        false
+      ],
+      "read_variables": true
+    },
+    "For Loop (Voltage_Loop_Down)": {
+      "step_type": "For Loop",
+      "has_children": true,
+      "children": [
+        {
+          "step_type": "Set Channels",
+          "has_children": false,
+          "children": [],
+          "name": "Set_U_1",
+          "full_name": "Set Channels (Set_U_1)",
+          "parent_step": "For Loop (Voltage_Loop_Down)",
+          "time_weight": 1,
+          "used_devices": [
+            "Potentiostat"
+          ],
+          "description": "",
+          "is_active": true,
+          "channels_values": {
+            "Channels": [
+              "Potentiostat_U"
+            ],
+            "Values": [
+              "Voltage_Loop_Down_Value"
+            ]
+          },
+          "wait_for_set": true
+        },
+        {
+          "step_type": "Wait",
+          "has_children": false,
+          "children": [],
+          "name": "Wait_1",
+          "full_name": "Wait (Wait_1)",
+          "parent_step": "For Loop (Voltage_Loop_Down)",
+          "time_weight": 1,
+          "used_devices": [],
+          "description": "",
+          "is_active": true,
+          "wait_time": "waitingtime",
+          "wait_type": "simple wait",
+          "skipable": true,
+          "condition": "",
+          "read_channels": [],
+          "skip_failed": []
+        },
+        {
+          "step_type": "Read Channels",
+          "has_children": false,
+          "children": [],
+          "name": "Read_CV_1",
+          "full_name": "Read Channels (Read_CV_1)",
+          "parent_step": "For Loop (Voltage_Loop_Down)",
+          "time_weight": 1,
+          "used_devices": [
+            "Potentiostat"
+          ],
+          "description": "",
+          "is_active": true,
+          "read_all": false,
+          "split_trigger": false,
+          "channel_list": [
+            "Potentiostat_I",
+            "Potentiostat_U"
+          ],
+          "skip_failed": [
+            false,
+            false
+          ],
+          "read_variables": true
+        }
+      ],
+      "name": "Voltage_Loop_Down",
+      "full_name": "For Loop (Voltage_Loop_Down)",
+      "parent_step": "For Loop (CyclesLoop)",
+      "time_weight": 349,
+      "used_devices": [
+        "Potentiostat"
+      ],
+      "description": "",
+      "is_active": true,
+      "loop_type": "start - stop",
+      "start_val": "max_V",
+      "stop_val": "min_V",
+      "min_val": "",
+      "max_val": "",
+      "n_points": "100",
+      "sweep_mode": "linear",
+      "n_iterations": 116,
+      "val_list": [],
+      "file_path": "",
+      "include_end_points": true,
+      "use_distance": true,
+      "point_distance": "deltaV"
+    },
+    "Set Channels (Set_U_1)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "Set_U_1",
+      "full_name": "Set Channels (Set_U_1)",
+      "parent_step": "For Loop (Voltage_Loop_Down)",
+      "time_weight": 1,
+      "used_devices": [
+        "Potentiostat"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "Potentiostat_U"
+        ],
+        "Values": [
+          "Voltage_Loop_Down_Value"
+        ]
+      },
+      "wait_for_set": true
+    },
+    "Wait (Wait_1)": {
+      "step_type": "Wait",
+      "has_children": false,
+      "children": [],
+      "name": "Wait_1",
+      "full_name": "Wait (Wait_1)",
+      "parent_step": "For Loop (Voltage_Loop_Down)",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "wait_time": "waitingtime",
+      "wait_type": "simple wait",
+      "skipable": true,
+      "condition": "",
+      "read_channels": [],
+      "skip_failed": []
+    },
+    "Read Channels (Read_CV_1)": {
+      "step_type": "Read Channels",
+      "has_children": false,
+      "children": [],
+      "name": "Read_CV_1",
+      "full_name": "Read Channels (Read_CV_1)",
+      "parent_step": "For Loop (Voltage_Loop_Down)",
+      "time_weight": 1,
+      "used_devices": [
+        "Potentiostat"
+      ],
+      "description": "",
+      "is_active": true,
+      "read_all": false,
+      "split_trigger": false,
+      "channel_list": [
+        "Potentiostat_I",
+        "Potentiostat_U"
+      ],
+      "skip_failed": [
+        false,
+        false
+      ],
+      "read_variables": true
+    },
+    "For Loop (MintoLast)": {
+      "step_type": "For Loop",
+      "has_children": true,
+      "children": [
+        {
+          "step_type": "Set Channels",
+          "has_children": false,
+          "children": [],
+          "name": "SetU2",
+          "full_name": "Set Channels (SetU2)",
+          "parent_step": "For Loop (MintoLast)",
+          "time_weight": 1,
+          "used_devices": [
+            "Potentiostat"
+          ],
+          "description": "",
+          "is_active": true,
+          "channels_values": {
+            "Channels": [
+              "Potentiostat_U"
+            ],
+            "Values": [
+              "MintoLast_Value"
+            ]
+          },
+          "wait_for_set": true
+        },
+        {
+          "step_type": "Wait",
+          "has_children": false,
+          "children": [],
+          "name": "Wait2",
+          "full_name": "Wait (Wait2)",
+          "parent_step": "For Loop (MintoLast)",
+          "time_weight": 1,
+          "used_devices": [],
+          "description": "",
+          "is_active": true,
+          "wait_time": "waitingtime",
+          "wait_type": "simple wait",
+          "skipable": true,
+          "condition": "",
+          "read_channels": [],
+          "skip_failed": []
+        },
+        {
+          "step_type": "Read Channels",
+          "has_children": false,
+          "children": [],
+          "name": "readi2",
+          "full_name": "Read Channels (readi2)",
+          "parent_step": "For Loop (MintoLast)",
+          "time_weight": 1,
+          "used_devices": [
+            "Potentiostat"
+          ],
+          "description": "",
+          "is_active": true,
+          "read_all": false,
+          "split_trigger": false,
+          "channel_list": [
+            "Potentiostat_I",
+            "Potentiostat_U"
+          ],
+          "skip_failed": [
+            false,
+            false
+          ],
+          "read_variables": true
+        }
+      ],
+      "name": "MintoLast",
+      "full_name": "For Loop (MintoLast)",
+      "parent_step": "None",
+      "time_weight": 199,
+      "used_devices": [
+        "Potentiostat"
+      ],
+      "description": "",
+      "is_active": true,
+      "loop_type": "start - stop",
+      "start_val": "min_V",
+      "stop_val": "last_V",
+      "min_val": "",
+      "max_val": "",
+      "n_points": "100",
+      "sweep_mode": "linear",
+      "n_iterations": 66,
+      "val_list": [],
+      "file_path": "",
+      "include_end_points": true,
+      "use_distance": true,
+      "point_distance": "deltaV"
+    },
+    "Set Channels (SetU2)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "SetU2",
+      "full_name": "Set Channels (SetU2)",
+      "parent_step": "For Loop (MintoLast)",
+      "time_weight": 1,
+      "used_devices": [
+        "Potentiostat"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "Potentiostat_U"
+        ],
+        "Values": [
+          "MintoLast_Value"
+        ]
+      },
+      "wait_for_set": true
+    },
+    "Wait (Wait2)": {
+      "step_type": "Wait",
+      "has_children": false,
+      "children": [],
+      "name": "Wait2",
+      "full_name": "Wait (Wait2)",
+      "parent_step": "For Loop (MintoLast)",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "wait_time": "waitingtime",
+      "wait_type": "simple wait",
+      "skipable": true,
+      "condition": "",
+      "read_channels": [],
+      "skip_failed": []
+    },
+    "Read Channels (readi2)": {
+      "step_type": "Read Channels",
+      "has_children": false,
+      "children": [],
+      "name": "readi2",
+      "full_name": "Read Channels (readi2)",
+      "parent_step": "For Loop (MintoLast)",
+      "time_weight": 1,
+      "used_devices": [
+        "Potentiostat"
+      ],
+      "description": "",
+      "is_active": true,
+      "read_all": false,
+      "split_trigger": false,
+      "channel_list": [
+        "Potentiostat_I",
+        "Potentiostat_U"
+      ],
+      "skip_failed": [
+        false,
+        false
+      ],
+      "read_variables": true
+    }
+  },
+  "plots": [
+    {
+      "plt_type": "X-Y plot",
+      "x_axis": "Potentiostat_U",
+      "y_axes": {
+        "formula": [
+          "Potentiostat_I"
+        ],
+        "axis": [
+          "left"
+        ]
+      },
+      "z_axis": "",
+      "title": "",
+      "xlabel": "",
+      "ylabel": "",
+      "ylabel2": "",
+      "logX": false,
+      "logY": false,
+      "logY2": false,
+      "zlabel": "",
+      "do_plot": true,
+      "same_fit": false,
+      "fits": [
+        {
+          "do_fit": false,
+          "predef_func": "Bose-Einstein Distribution",
+          "custom_func": "",
+          "use_custom_func": false,
+          "guess_params": true,
+          "name": "",
+          "display_values": false,
+          "initial_params": {
+            "name": [
+              "amplitude",
+              "center",
+              "kt"
+            ],
+            "initial value": [
+              1,
+              1,
+              1
+            ],
+            "lower bound": [
+              "",
+              "",
+              ""
+            ],
+            "upper bound": [
+              "",
+              "",
+              ""
+            ]
+          },
+          "y": "Potentiostat_I",
+          "x": "Potentiostat_U"
+        }
+      ],
+      "plot_all_available": true,
+      "all_fit": {
+        "do_fit": false,
+        "predef_func": "Bose-Einstein Distribution",
+        "custom_func": "",
+        "use_custom_func": false,
+        "guess_params": true,
+        "name": "",
+        "display_values": false,
+        "initial_params": {
+          "name": [
+            "amplitude",
+            "center",
+            "kt"
+          ],
+          "initial value": [
+            1,
+            1,
+            1
+          ],
+          "lower bound": [
+            "",
+            "",
+            ""
+          ],
+          "upper bound": [
+            "",
+            "",
+            ""
+          ]
+        },
+        "y": "",
+        "x": "Potentiostat_U"
+      },
+      "name": "Potentiostat_I vs. Potentiostat_U",
+      "maxlen": Infinity,
+      "top_left_x": "",
+      "top_left_y": "",
+      "plot_width": "",
+      "plot_height": "",
+      "checkbox_manual_plot_position": true,
+      "checkbox_show_in_browser": false,
+      "browser_port": 8050
+    }
+  ],
+  "filename": "Testfile_CV_Test",
+  "variables": {
+    "CyclesLoop_Count": 0,
+    "CyclesLoop_Value": 0,
+    "MintoLast_Count": 0,
+    "MintoLast_Value": 0,
+    "StarttoMin_Count": 0,
+    "StarttoMin_Value": 0,
+    "Voltage_Loop_Down_Count": 0,
+    "Voltage_Loop_Down_Value": 0,
+    "Voltage_Loop_Up_Count": 0,
+    "Voltage_Loop_Up_Value": 0,
+    "cycles": 1,
+    "last_V": 0.0,
+    "max_V": 1.0,
+    "min_V": -1.3,
+    "start_V": 0.0,
+    "deltaV": 0.02,
+    "waitingtime": 0.01
+  },
+  "loop_step_variables": {},
+  "channels": {},
+  "name": "Protocol_CV_Real",
+  "use_nexus": false,
+  "measurement_description": "",
+  "tags": []
+}

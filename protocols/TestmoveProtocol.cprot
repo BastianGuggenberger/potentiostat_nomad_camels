@@ -1,0 +1,164 @@
+{
+  "description": "",
+  "export_csv": false,
+  "export_json": false,
+  "session_name": "",
+  "skip_config": false,
+  "h5_during_run": true,
+  "use_end_protocol": false,
+  "end_protocol": "",
+  "live_variable_update": false,
+  "allow_live_comments": false,
+  "flyer_data": [],
+  "instrument_aliases": {
+    "Instrument": [],
+    "Alias": []
+  },
+  "channel_aliases": {
+    "channel": [],
+    "Alias": []
+  },
+  "loop_steps": [
+    {
+      "step_type": "Read Channels",
+      "has_children": false,
+      "children": [],
+      "name": "connect",
+      "full_name": "Read Channels (connect)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "read_all": false,
+      "split_trigger": false,
+      "channel_list": [
+        "xy_connect"
+      ],
+      "skip_failed": [
+        false
+      ],
+      "read_variables": true
+    },
+    {
+      "step_type": "Read Channels",
+      "has_children": false,
+      "children": [],
+      "name": "testmove",
+      "full_name": "Read Channels (testmove)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "read_all": false,
+      "split_trigger": false,
+      "channel_list": [
+        "xy_testmove"
+      ],
+      "skip_failed": [
+        false
+      ],
+      "read_variables": true
+    },
+    {
+      "step_type": "Read Channels",
+      "has_children": false,
+      "children": [],
+      "name": "disconnect",
+      "full_name": "Read Channels (disconnect)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "read_all": false,
+      "split_trigger": false,
+      "channel_list": [
+        "xy_disconnect"
+      ],
+      "skip_failed": [
+        false
+      ],
+      "read_variables": true
+    }
+  ],
+  "loop_step_dict": {
+    "Read Channels (connect)": {
+      "step_type": "Read Channels",
+      "has_children": false,
+      "children": [],
+      "name": "connect",
+      "full_name": "Read Channels (connect)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "read_all": false,
+      "split_trigger": false,
+      "channel_list": [
+        "xy_connect"
+      ],
+      "skip_failed": [
+        false
+      ],
+      "read_variables": true
+    },
+    "Read Channels (testmove)": {
+      "step_type": "Read Channels",
+      "has_children": false,
+      "children": [],
+      "name": "testmove",
+      "full_name": "Read Channels (testmove)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "read_all": false,
+      "split_trigger": false,
+      "channel_list": [
+        "xy_testmove"
+      ],
+      "skip_failed": [
+        false
+      ],
+      "read_variables": true
+    },
+    "Read Channels (disconnect)": {
+      "step_type": "Read Channels",
+      "has_children": false,
+      "children": [],
+      "name": "disconnect",
+      "full_name": "Read Channels (disconnect)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [],
+      "description": "",
+      "is_active": true,
+      "read_all": false,
+      "split_trigger": false,
+      "channel_list": [
+        "xy_disconnect"
+      ],
+      "skip_failed": [
+        false
+      ],
+      "read_variables": true
+    }
+  },
+  "plots": [],
+  "filename": "",
+  "variables": {},
+  "loop_step_variables": {},
+  "channels": {},
+  "name": "TestmoveProtocol",
+  "use_nexus": false,
+  "measurement_description": "",
+  "tags": []
+}

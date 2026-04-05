@@ -1,0 +1,172 @@
+{
+  "description": "",
+  "export_csv": false,
+  "export_json": false,
+  "session_name": "",
+  "skip_config": false,
+  "h5_during_run": true,
+  "use_end_protocol": false,
+  "end_protocol": "",
+  "live_variable_update": false,
+  "allow_live_comments": false,
+  "flyer_data": [],
+  "instrument_aliases": {
+    "Instrument": [],
+    "Alias": []
+  },
+  "channel_aliases": {
+    "channel": [],
+    "Alias": []
+  },
+  "loop_steps": [
+    {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "height",
+      "full_name": "Set Channels (height)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_height_param"
+        ],
+        "Values": [
+          "'MOVE_HEIGHT'"
+        ]
+      },
+      "wait_for_set": true
+    },
+    {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "position",
+      "full_name": "Set Channels (position)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_position_param"
+        ],
+        "Values": [
+          "'WASTE_POSITION'"
+        ]
+      },
+      "wait_for_set": true
+    },
+    {
+      "step_type": "Read Channels",
+      "has_children": false,
+      "children": [],
+      "name": "Read_Channels",
+      "full_name": "Read Channels (Read_Channels)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "read_all": false,
+      "split_trigger": false,
+      "channel_list": [
+        "xy_volume_zero"
+      ],
+      "skip_failed": [
+        false
+      ],
+      "read_variables": true
+    }
+  ],
+  "loop_step_dict": {
+    "Set Channels (height)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "height",
+      "full_name": "Set Channels (height)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_height_param"
+        ],
+        "Values": [
+          "'MOVE_HEIGHT'"
+        ]
+      },
+      "wait_for_set": true
+    },
+    "Set Channels (position)": {
+      "step_type": "Set Channels",
+      "has_children": false,
+      "children": [],
+      "name": "position",
+      "full_name": "Set Channels (position)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "channels_values": {
+        "Channels": [
+          "xy_position_param"
+        ],
+        "Values": [
+          "'WASTE_POSITION'"
+        ]
+      },
+      "wait_for_set": true
+    },
+    "Read Channels (Read_Channels)": {
+      "step_type": "Read Channels",
+      "has_children": false,
+      "children": [],
+      "name": "Read_Channels",
+      "full_name": "Read Channels (Read_Channels)",
+      "parent_step": "None",
+      "time_weight": 1,
+      "used_devices": [
+        "xy"
+      ],
+      "description": "",
+      "is_active": true,
+      "read_all": false,
+      "split_trigger": false,
+      "channel_list": [
+        "xy_volume_zero"
+      ],
+      "skip_failed": [
+        false
+      ],
+      "read_variables": true
+    }
+  },
+  "plots": [],
+  "filename": "",
+  "variables": {},
+  "loop_step_variables": {},
+  "channels": {},
+  "name": "setvolumezero",
+  "use_nexus": false,
+  "measurement_description": "",
+  "tags": []
+}
