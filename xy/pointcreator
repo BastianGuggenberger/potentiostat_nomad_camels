@@ -1,0 +1,25 @@
+import math
+
+def createsamplepointsbynumber(self, pointnumber):
+        self.samplepoints = [] #clear previous points
+
+        pointsperrow = math.ceil(math.sqrt(pointnumber)) #round up
+        distance = (self.params["SAMPLE_SIZE"][0]-2*self.params["SAMPLE_DISTANCEBORDER"])/(pointsperrow-1)
+        
+        #relative positions:
+        producedpoints = 0
+        y = self.params["SAMPLE_DISTANCEBORDER"]
+        while(y<=self.params["SAMPLE_SIZE"][0]-self.params["SAMPLE_DISTANCEBORDER"]):
+            x = self.params["SAMPLE_DISTANCEBORDER"]
+            while(x<=self.params["SAMPLE_SIZE"][1]-self.params["SAMPLE_DISTANCEBORDER"]):
+                if (producedpoints<pointnumber):
+                    self.samplepoints.append((x,y))
+                    producedpoints += 1
+                else:
+                    break
+                x += distance
+            y += distance
+
+        #convert to absolute positions:
+        self.samplepoints = [(x+self.params["SAMPLE_ORIGIN"][0]+self.params["ORIGIN_OFFSET"][0],
+                            y+self.params["SAMPLE_ORIGIN"][1]+self.params["ORIGIN_OFFSET"][1]) for (x,y) in self.samplepoints]
